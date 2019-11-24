@@ -1,0 +1,173 @@
+@import "utils/reset";
+@import "utils/vars";
+@import "utils/fonts";
+
+html {
+  font-family: $mainFont;
+  background-color: $white;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:active,
+  &:hover {
+    outline: 0;
+    color: $textColor;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper.no-scroll {
+  height: 100vh;
+}
+
+.container {
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content{
+  background-color: $white;
+}
+
+main.main{
+  & P{
+    color: $textColor;
+  }
+}
+
+section,
+main,
+header{
+  padding: 0 20px;
+}
+
+h1.title {
+  font-size: $fz11;
+  color: $headerColor;
+  font-weight: $extraBold;
+}
+
+h2.title {
+  font-size: $fz9;
+  color: $black;
+  font-weight: $bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: $ls1;
+  padding-top: 25px;
+  position: relative;
+  text-align: center;
+  &::before{
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background-image: url('/assets/img/icons/icon-title-2.svg');
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.button {
+  padding: 14px 34px;
+  font-size: $fz1;
+  font-weight: $semiBold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: .2s;
+  background-color: $white;
+  cursor: pointer;
+  color: $stage;
+
+  &:hover{
+    color: $white;
+    background-color: $stage;
+  }
+}
+
+.visible__sm {
+  display: none;
+}
+
+.visible__md {
+  display: none;
+}
+
+@import "modules/header.scss";
+
+@import "modules/menu.scss";
+
+@import "modules/burger.scss";
+
+@import "modules/message.scss";
+
+@import "modules/doctors.scss";
+
+@import "modules/categories.scss";
+
+@import "modules/form.scss";
+
+@import "modules/index.scss";
+
+@import "modules/socials.scss";
+
+@import "modules/footer.scss";
+
+@import "modules/slick.scss";
+
+@import "modules/slick-theme.scss";
+
+@media (min-width: $tablet) {
+  .visible__sm {
+    display: block;
+  }
+
+  .hidden__sm {
+    display: none;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  .hidden__md{
+    display: none;
+  }
+
+  .visible__md{
+    display: block;
+  }
+
+  h2.title{
+    font-size: $fz40;
+  }
+
+  .wrapper{
+    padding-top: 60px;
+  }
+
+  .container{
+    padding: 0 50px;
+  }
+
+  section{
+    padding: 0 50px;
+  }
+}

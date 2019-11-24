@@ -1,0 +1,9 @@
+section.doctors{
+  margin-bottom: 20px;
+}
+
+@media (min-width: smDesktopWidth){
+  section.doctors{
+    margin-bottom: 65px;
+  }
+}

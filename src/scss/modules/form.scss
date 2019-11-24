@@ -1,0 +1,106 @@
+form.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  position: relative;
+
+  & .form__field {
+    margin-bottom: 25px;
+    position: relative;
+
+    input.input {
+      padding: 0px 0 5px;
+      font-size: $fz3;
+      width: 100%;
+      line-height: 1;
+      color: $headerColor;
+      background-color: transparent;
+      border-bottom: .5px solid $white;
+      cursor: pointer;
+
+      &:focus{
+        outline: none;
+      }
+
+      &:focus ~ label,
+      &:valid ~ label{
+        top: -15px;
+        font-size: $fz3;
+      }
+
+      &:focus ~ .bar::before,
+      &:focus ~ .bar::after{
+        width: 50%;
+      }
+    }
+
+    & textarea.textarea{
+      padding: 15px;
+      font-size: $fz3;
+      width: 100%;
+      line-height: $lineHeight3;
+      color: $headerColor;
+      min-height: 129px;
+
+      & ~ label{
+        top: -20px;
+      }
+    }
+
+    & label{
+      font-size: $fz5;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left: 0;
+      top: 0;
+      transition: 0.2s ease all; 
+      color: rgba(255,255,255,.6);
+    }
+
+    & .bar{
+      position:relative; 
+      display:block; 
+      width:100%;
+      &::before,
+      &::after {
+        content:'';
+        height: 1px; 
+        width: 0;
+        bottom: 1px; 
+        position:absolute;
+        background:$white; 
+        transition:0.2s ease all; 
+      }
+      &::before{
+        left: 50%;
+      }
+      &::after{
+        right: 50%;
+      }
+    }
+
+    &:nth-of-type(2){
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type{
+      margin-bottom: 0;
+      text-align: center;
+      & button.button {
+        display: inline-block;
+        font-size: $fz6;
+        padding: 12px 40px;
+        font-weight: $bold;
+        font-family: $mainFont;
+        color: $white;
+        background-color: $darkBlue;
+        text-transform: capitalize;
+        transition: .2s;
+        &:hover{
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
