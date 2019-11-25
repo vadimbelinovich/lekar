@@ -88,19 +88,24 @@ h2.title {
 }
 
 .button {
-  padding: 14px 34px;
-  font-size: $fz1;
-  font-weight: $semiBold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  padding: 18px 30px 18px 10px;
   transition: .2s;
-  background-color: $white;
+  background-color: $green;
   cursor: pointer;
-  color: $stage;
-
-  &:hover{
+  text-align: center;
+  background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+  background-size: auto 14%;
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  & a.btn{
     color: $white;
-    background-color: $stage;
+    letter-spacing: $ls3;
+    font-size: $fz3;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+  &:hover{
+    background-position: 95% 50%;
   }
 }
 

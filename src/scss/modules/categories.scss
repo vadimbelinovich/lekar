@@ -123,26 +123,26 @@ section.categories{
           }
           &:hover{
             & p{
-              background: linear-gradient(0deg, rgba(239, 128, 181, 0.7), rgba(239, 128, 181, 0.7));
+              background-color: rgba(239, 128, 181, 0.7);
             }
             &:nth-child(2){
               & a{
                 & p{
-                  background: linear-gradient(0deg, rgba(242, 125, 2, 0.7), rgba(242, 125, 2, 0.7));
+                  background-color: rgba(242, 125, 2, 0.7);
                 }
               }
             }
             &:nth-child(3){
               & a{
                 & p{
-                  background: linear-gradient(0deg, rgba(55, 137, 64, 0.7), rgba(55, 137, 64, 0.7));
+                  background-color: rgba(55, 137, 64, 0.7);
                 }
               }
             }
             &:nth-child(4){
               & a{
                 & p{
-                  background: linear-gradient(0deg, rgba(64, 134, 208, 0.7), rgba(64, 134, 208, 0.7));
+                  background-color: rgba(64, 134, 208, 0.7);
                 }
               }
             }
