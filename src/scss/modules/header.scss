@@ -10,7 +10,6 @@ header.header {
   
     a.logo {
       cursor: pointer;
-  
       & img{
         display: block;
         max-width: 100px;
@@ -26,78 +25,19 @@ header.header {
   }
 }
 
-@media (min-width: 768px){
-  header.header{
-    font-size: $fz5;
-    & .container{
-      a.logo{
-        & img{
-          max-width: 180px;
-        }
-      }
-    }
-    
-  }
-}
-
-@media (min-width: 992px) {
+@media (min-width: $smDesktopWidth) {
   header.header {
-    bottom: 0;
-    height: 90px;
-    width: 100%;
-
+    padding: 4px 0;
     & .container{
-      padding: 0 30px;
-      margin: auto;
-    }
-
-    &.hidden__md{
-      display: none;
-    }
-
-    &.visible__md{
-      display: flex;
-    }
-
-    & li{
-      & a{
-        &:hover{
-          background-color: $red;
-        }
-      }
-    }
-  
-    a.logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      &.hidden__md{
-        display: none;
-      }
-      & span{
-        display: inline-block;
-        margin-right: 10px;
-      }
-  
-      &:hover{
-        color: $white;
-      }
+      height: 100%;
     }
   }
-
 }
 
-@media (min-width: 1200px){
-  header.header{
+@media (min-width: $desktopWidth) {
+  header.header {
     & .container{
-      & li{
-        & a{
-          padding: 10px 20px;
-          &:hover{
-            background-color: $red;
-          }
-        }
-      }
+      padding: 0 8%;
     }
   }
 }

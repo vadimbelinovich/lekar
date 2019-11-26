@@ -1,82 +1,43 @@
 form.form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
   position: relative;
 
   & .form__field {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     position: relative;
 
     input.input {
-      padding: 0px 0 5px;
+      padding: 10px 25px;
       font-size: $fz3;
       width: 100%;
       line-height: 1;
-      color: $headerColor;
-      background-color: transparent;
-      border-bottom: .5px solid $white;
+      color: $black;
+      background-color: $white;
       cursor: pointer;
-
+      font-family: $mainFont;
+      margin-bottom: 30px;
       &:focus{
         outline: none;
       }
-
-      &:focus ~ label,
-      &:valid ~ label{
-        top: -15px;
-        font-size: $fz3;
+      &::placeholder{
+        color: $gray;
       }
-
-      &:focus ~ .bar::before,
-      &:focus ~ .bar::after{
-        width: 50%;
+      &:last-of-type{
+        margin-bottom: 0;
       }
     }
 
     & textarea.textarea{
-      padding: 15px;
+      padding: 13px 25px;
       font-size: $fz3;
       width: 100%;
       line-height: $lineHeight3;
-      color: $headerColor;
-      min-height: 129px;
-
-      & ~ label{
-        top: -20px;
-      }
-    }
-
-    & label{
-      font-size: $fz5;
-      font-weight:normal;
-      position:absolute;
-      pointer-events:none;
-      left: 0;
-      top: 0;
-      transition: 0.2s ease all; 
-      color: rgba(255,255,255,.6);
-    }
-
-    & .bar{
-      position:relative; 
-      display:block; 
-      width:100%;
-      &::before,
-      &::after {
-        content:'';
-        height: 1px; 
-        width: 0;
-        bottom: 1px; 
-        position:absolute;
-        background:$white; 
-        transition:0.2s ease all; 
-      }
-      &::before{
-        left: 50%;
-      }
-      &::after{
-        right: 50%;
+      color: $black;
+      min-height: 120px;
+      font-family: $mainFont;
+      &::placeholder{
+        color: $gray;
       }
     }
 
@@ -86,19 +47,50 @@ form.form {
 
     &:last-of-type{
       margin-bottom: 0;
-      text-align: center;
       & button.button {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 30px 0 15px;
         display: inline-block;
-        font-size: $fz6;
-        padding: 12px 40px;
-        font-weight: $bold;
-        font-family: $mainFont;
+        background-color: transparent;
+        border: 1px solid $white;
+        background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+        background-size: auto 13%;
+        background-position: 90% 50%;
+        background-repeat: no-repeat;
         color: $white;
-        background-color: $darkBlue;
-        text-transform: capitalize;
+        letter-spacing: $ls3;
+        font-size: $fz3;
+        font-weight: $bold;
+        text-transform: uppercase;
+        cursor: pointer;
         transition: .2s;
         &:hover{
-          background-color: $red;
+          background-position: 92% 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $smDesktopWidth){
+  form.form{
+    width: 55%;
+
+    & .form__field{
+      input.input {
+        width: 48%;
+        margin-bottom: 0;
+        padding: 17px 25px;
+      }
+      &:first-of-type{
+        display: flex;
+        justify-content: space-between;
+      }
+      &:last-of-type{
+        & button.button {
+          width: 262px;
         }
       }
     }

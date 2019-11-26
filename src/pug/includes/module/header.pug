@@ -1,29 +1,45 @@
 header.header
   .container
-    a.logo 
+    a.logo.hidden__md
       img(src="./assets/img/icons/icon-logo.svg", alt="logo")
-    h3.title
+    h3.title.hidden__md
       | Клиника остеопатии
       br
       | и&#160;реабилитации
     .burger
-      input#menu-switch(type="checkbox")
+      input#menu-switch.hidden__md(type="checkbox")
       nav#navigation
         ul.list
+          li.item.visible__md
+            a.logo
+              img(src="./assets/img/icons/icon-logo.svg", alt="logo")
           li.item
-            a.link(href="/contacts.html") контакты
+            a.link(href="") о клинике
           li.item
-            a.link(href="") События
-        .quick-contact
-          address.visible__md
-            | 190121 Санкт-Петербург,
-            br 
-            | Английская наб., 70
+            a.link(href="") врачи
+          li.item
+            a.link(href="") услуги
+          li.item
+            a.link(href="") цены
+          li.item
+            a.link(href="") блог
+          li.item
+            a.link(href="") отзывы
+          li.item
+            a.link(href="") контакты
+          li.item
+            a.link(href="") вакансии
+        .quick-contact.hidden__md
           p.contacts 
-            | Телефон: 
             a(href="tel:+79217435359") +7 (921) 743-53-59 
             br 
-            | e-mail: 
             a(href="mailto:office-centre@mail.ru") office-centre@mail.ru
-      label.menu-switch(for='menu-switch')
+          p.address
+            img(src="./assets/img/icons/icon-metro.svg", alt="icon") 
+            | Петроградская
+            br
+            | ул. Староалексеевская, 8
+          .button
+            a.btn(href="") записаться на прием
+      label.menu-switch.hidden__md(for='menu-switch')
         span

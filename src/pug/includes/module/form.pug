@@ -3,15 +3,9 @@ form.form
   input(type="hidden" name="admin_email" value="v.belinovich@uno-agency.ru")
   input(type="hidden" name="form_subject" value="Вопрос с формы сайта protiv-grippa")
   .form__field
-    input.input(type="text" name='имя' required)
-    span.bar
-    label Ваше имя
+    input.input(type="text" name='имя' placeholder='Ваше имя' required)
+    input.input(type="text" name='email' placeholder='Ваш e-mail' required)
   .form__field
-    input.input(type="text" name='email' required)
-    span.bar
-    label Ваш e-mail
+    textarea.textarea(name='вопрос' placeholder='Ваш вопрос' required)
   .form__field
-    textarea.textarea(name='вопрос' required)
-    label Ваш вопрос
-  .form__field
-    button.button Отправить
+    button.button связаться с нами

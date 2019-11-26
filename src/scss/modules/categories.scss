@@ -61,7 +61,7 @@ section.categories{
 @media (min-width: $smDesktopWidth){
   section.categories{
     margin-bottom: 0px;
-    padding: 75px 50px;
+    padding: 75px 67px;
     & .container{
       & ul.list{
         justify-content: center;
@@ -82,14 +82,13 @@ section.categories{
             & p{
               position: absolute;
               color: $green;
-              font-size: $fz4;
+              font-size: $fz2;
               top: 0;
               bottom: 0;
               left: 0;
               right: 0;
               margin: auto;
               letter-spacing: $ls1;
-              font-size: $fz7;
               color: $white;
               transition: .2s;
               &:last-child{
@@ -145,6 +144,22 @@ section.categories{
                   background-color: rgba(64, 134, 208, 0.7);
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktopWidth){
+  section.categories{
+    & .container{
+      & ul.list{
+        & li.item{
+          & a{
+            & p{
+              font-size: $fz7;
             }
           }
         }

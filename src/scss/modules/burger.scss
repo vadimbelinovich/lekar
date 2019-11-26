@@ -82,98 +82,109 @@
 
   & #navigation{
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: fixed;
     bottom: 0;
     right: 0;
-    top: 60px;
+    top: 64px;
     left: 0;
-    justify-content: center;
     background: $white;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.15);
     transform: translate(0, 90px);
     opacity: 0;
     pointer-events: none;
-
     & ul{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      text-align: left;
+      text-align: center;
       flex: auto;
-      padding-left: 20px;
       width: 100%;
-
       & li{
         transition: .2s;
-        margin-bottom: 10px;
-
-        & ul.list{
-          margin-top: 10px;
-          & li.item{
-            margin-bottom: 5px;
-            & a{
-              font-size: $fz5;
-              padding: 0;
-              display: inline-block;
-              &:hover,
-              &:active{
-                background-color: transparent;
-              }
-              
-            }
+        height: 12.6%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        & a{
+          font-size: $fz5;
+          padding: 0;
+          display: inline-block;
+          color: $white;
+          text-transform: uppercase;
+          font-weight: $bold;
+          transition: .2s;
+          &:hover,
+          &:active{
+            color: $black;
+          }
+          
+        }
+        &::after{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0;
+          right: 0;
+          bottom: -4px;
+          margin: auto;
+          width: 8px;
+          height: 8px;
+          background-image: url('/assets/img/icons/icon-menu.svg');
+          background-size: contain;
+          background-position: 50%;
+          background-repeat: no-repeat;
+        }
+        &:last-child{
+          &::after{
+            display: none;
           }
         }
-        a{
-          font-size: $fz8;
-          line-height: $lineHeight2;
-          text-transform: initial;
+        &.visible__md{
+          display: none;
         }
       }
     }
   }
 
   & .quick-contact{
-    flex-basis: inherit;
-
-    & a.logo{
-      position: relative;
-      transform: rotate(0deg);
-      flex-direction: column;
-      left: auto;
-      align-items: flex-start;
-      font-size: $fz13;
-      color: $headerColor;
-      display: none;
-
-      & span{
-        display: block;
-        margin-right: 0;
-      }
-
-      &:hover{
-        color: inherit;
+    width: 100%;
+    background-color: $green;
+    text-align: center;
+    padding: 20px 10px;
+    & p.address{
+      font-style: normal;
+      margin: 1.5em 0;
+      color: $white;
+      font-size: $fz6;
+      line-height: 160%;
+      & img{
+        display: inline-block;
+        margin-right: 6px;
       }
     }
 
-    & address{
+    & p.contacts{
       font-style: normal;
-      margin: 2em 0;
-      color: $yellow;
       font-size: $fz5;
       line-height: 160%;
-    }
-
-    & .contacts{
-      font-style: normal;
-    
-      color: $yellow;
-      font-size: $fz5;
-      line-height: 160%;
-
       & a{
-        color: $yellow;
-        font-weight: $semiBold;
+        color: $white;
+        font-weight: $bold;
+        font-size: $fz8;
+      }
+    }
+
+    & .button{
+      & a{
+        color: $black;
+        font-weight: $bold;
+        background-color: $white;
+        padding: 0px 65px 0px 40px;
+        background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
       }
     }
   }
@@ -184,168 +195,65 @@
     transform: translate(0, 0);
     cursor: default;
     flex-direction: column;
-    background-color: $midBlue;
+    background-color: $orange;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $smDesktopWidth) {
   .burger{
-    width: 108px;
-
-    & .menu-switch{
-      width: 108px;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  
-  .menu-switch{
-    display: none;
-  }
-
-  #navigation{
-    top: 0;
     width: 100%;
-    justify-content: space-around;
-    position: relative;
-    opacity: 1;
-    background: transparent;
-    transform: translateY(0px);
-
-    & ul {
-      display: flex;
+    margin-left: 0;
+    height: 100%;
+    cursor: inherit;
+    & #navigation{
+      position: relative;
+      opacity: 1;
+      transform: inherit;
       flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-
-      & li:first-child{
-        position: relative;
-        & a:hover ~ ul.list,
-        ul.list:hover{
-          display: block;
-          opacity: 1;
-          width: 121px;
-          position: absolute;
-          background-color: $white;
-          top: 50%;
-          border-radius: 0 0 20px 20px;
-          padding-top: 20px;
-          left: 0;
-          width: 100%;
-          & li{
-            padding: 0 5px;
-            & a{
-              background-color: transparent;
-              color: $midBlue;
-              font-size: $fz3;
-              font-weight: $medium;
-              padding: 10px 0;
-              text-transform: inherit;
-              border-bottom: .5px solid rgba(0,98,217,.5);
-              border-radius: 0;
-              &:hover{
-                color: $red;
-              }
+      top: 0;
+      box-shadow: none;
+      pointer-events: inherit;
+      height: 100%;
+      & ul{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        & li{
+          height: auto;
+          flex-grow: 1;
+          height: 100%;
+          & a{
+            font-size: $fz7;
+            color: $black;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            &:hover,
+            &:active{
+              color: $orange;
             }
-            &:last-child{
-              & a{
-                border-bottom: none;
+            &.logo{
+              & img{
+                max-width: 65px;
+                height: 100%;
               }
             }
           }
-          
-        }
-        & a:hover{
-          background-color: #fff;
-          color: $midBlue;
-        }
-        & .first__link{
-          background-color: #fff;
-          color: $midBlue;
-          position: relative;
-          z-index: 1;
-        }
-      } 
-
-      & li {
-        text-align: left;
-        margin-bottom: 0;
-        text-align: center;
-        & ul.list{
-          display: none;
-          opacity: 0;
-          transition: .2s;
-        }
-        & a{
-          font-size: $fz4;
-          text-transform: uppercase;
-          &.logo{
-            position: relative;
-            & p{
-              font-size: $fz4;
+          &::after{
+            right: -4px;
+            left: auto;
+            bottom: 0;
+            top: 0;
+            background-image: url('/assets/img/icons/icon-menu-gray.svg');
+          }
+          &:last-child{
+            &::after{
+              display: none;
             }
           }
-        }
-      }
-    }
-
-    & .quick-contact{
-      flex-basis: 50%;
-
-      & a.logo{
-        position: relative;
-        transform: rotate(0deg);
-        flex-direction: column;
-        left: auto;
-        align-items: flex-start;
-        font-size: $fz13;
-        color: $headerColor;
-        display: block;
-
-        & span{
-          display: block;
-          margin-right: 0;
-        }
-
-        &:hover{
-          color: inherit;
-        }
-      }
-
-      & address{
-        font-style: normal;
-      
-        margin: 2em 0;
-        color: $gray2;
-        font-size: $fz5;
-        line-height: 160%;
-      }
-
-      & .contacts{
-        font-style: normal;
-      
-        color: $gray2;
-        font-size: $fz5;
-        line-height: 160%;
-
-        & a{
-          color: $stage;
-          font-weight: $semiBold;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  #navigation{
-    & ul {
-      & li:first-child{
-        & a:hover ~ ul.list,
-        ul.list:hover{
-          & li{
-            padding: 0 10px;
+          &.visible__md{
+            display: flex;
           }
         }
       }

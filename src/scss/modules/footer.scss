@@ -8,7 +8,7 @@ footer.footer {
       background-color: $gray2;
       padding: 30px 20px 35px;
       position: relative;
-      z-index: 1;
+      z-index: 0;
       overflow: hidden;
       & .block{
         width: 100%;
@@ -45,7 +45,7 @@ footer.footer {
               }
             }
           }
-          & p.adress{
+          & p.address{
             text-align: center;
             font-size: $fz6;
             & img{
@@ -67,10 +67,10 @@ footer.footer {
           display: block;
           position: absolute;
           content: '';
-          right: -40%;
-          bottom: -60%;
-          width: 150%;
-          height: 140%;
+          right: -85%;
+          bottom: -80%;
+          width: 220%;
+          height: 170%;
           background-size: contain;
           background-position: 50%;
           background-repeat: no-repeat;
@@ -100,7 +100,7 @@ footer.footer {
 @media (min-width: $smDesktopWidth) {
   footer.footer {
     & .part{
-      padding: 0 50px;
+      padding: 0 67px;
       &:first-child{
         & .container{
           flex-direction: row;
@@ -128,7 +128,8 @@ footer.footer {
             &:nth-child(2){
               & ul.list{
                 & li.item{
-                  margin-bottom: 8px;
+                  margin-bottom: 12px;
+                  line-height: 1;
                   & a{
                     color: $black;
                     text-transform: uppercase;
@@ -164,7 +165,7 @@ footer.footer {
                   }
                 }
               }
-              & p.adress{
+              & p.address{
                 text-align: left;
                 & img{
                   margin-right: 7px;
@@ -173,7 +174,20 @@ footer.footer {
             }
             &:last-child{
               margin-right: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
             }
+          }
+          &::before{
+            right: auto;
+            bottom: auto;
+            left: -15%;
+            top: -20%;
+            width: 80%;
+            height: 170%;
+            background-position: 0 0;
+            background-size: cover;
           }
         }
       }

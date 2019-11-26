@@ -26,10 +26,9 @@ a {
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.wrapper.no-scroll {
-  height: 100vh;
+  &.no-scroll {
+    height: 100vh;
+  }
 }
 
 .container {
@@ -67,6 +66,7 @@ h2.title {
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: $ls1;
+  line-height: $lineHeight4;
   padding-top: 25px;
   position: relative;
   text-align: center;
@@ -88,24 +88,29 @@ h2.title {
 }
 
 .button {
-  padding: 18px 30px 18px 10px;
-  transition: .2s;
-  background-color: $green;
-  cursor: pointer;
   text-align: center;
-  background-image: url('/assets/img/icons/icon-btn-arrow.svg');
-  background-size: auto 14%;
-  background-position: 90% 50%;
-  background-repeat: no-repeat;
   & a.btn{
+    color: $white;
+    display: inline-block;
+    padding: 0 30px 0 15px;
+    height: 45px;
+    line-height: 45px;
+    transition: .2s;
+    background-color: $green;
+    cursor: pointer;
+    text-align: center;
+    background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+    background-size: auto 13%;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
     color: $white;
     letter-spacing: $ls3;
     font-size: $fz3;
     font-weight: $bold;
     text-transform: uppercase;
-  }
-  &:hover{
-    background-position: 95% 50%;
+    &:hover{
+      background-position: 92% 50%;
+    }
   }
 }
 
@@ -164,15 +169,13 @@ h2.title {
     font-size: $fz40;
   }
 
-  .wrapper{
-    padding-top: 60px;
-  }
-
   .container{
     padding: 0 50px;
   }
 
-  section{
-    padding: 0 50px;
+  section,
+  main,
+  header{
+    padding: 0 67px;
   }
 }
