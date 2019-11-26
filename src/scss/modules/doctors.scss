@@ -70,7 +70,7 @@ section.doctors{
           &:first-child{
             display: flex;
             flex-direction: column;
-            width: 30%;
+            min-width: 270px;
             padding-right: 30px;
             border-right: 1px solid $white;
             & h2.title {
@@ -113,7 +113,7 @@ section.doctors{
             }
           }
           &:last-child{
-            width: 70%;
+            flex: auto;
             padding-left: 30px;
             & .person{
               display: flex;
@@ -170,7 +170,7 @@ section.doctors{
 @media (min-width: $desktopWidth){
   section.doctors{
     & .container{
-      padding: 100px 5% 0;
+      padding: 100px 7% 0;
       & .tabs{
         & .part{
           &:first-child{
