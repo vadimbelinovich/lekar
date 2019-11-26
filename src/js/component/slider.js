@@ -1,11 +1,17 @@
-import "slick-carousel";
-
-function slider() {
-  if($('.company ul.slider').length) {
-    $('.company ul.slider').slick({
-      autoplay: true,
+function docSlider() {
+  if($('.doctors ul.slider').length) {
+    $('.doctors ul.slider').slick({
+      autoplay: false,
+      dots: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: 'unslick'
+        }
+  ]
     });
   }
 }
 
-export default slider();
+export default docSlider();

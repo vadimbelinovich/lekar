@@ -1,9 +1,202 @@
 section.doctors{
   margin-bottom: 20px;
+  & .container{
+    padding: 0;
+    & ul.list{
+      background-image: url('/assets/img/bg/doctors-bg.jpg');
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: repeat;
+      & .pic{
+        background-color: $lightGreen;
+        height: 250px;
+        font-size: 0;
+        text-align: center;
+        & img{
+          display: inline-block;
+          max-height: 100%;
+        }
+      }
+      & .content{
+        padding: 45px 20px 30px;
+        background-color: transparent;
+        & h3.title{
+          font-size: $fz10;
+          margin-bottom: 20px;
+        }
+        & p.subtitle{
+          color: $green;
+          font-size: $fz2;
+          font-weight: $bold;
+          letter-spacing: $ls1;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+        & p.about {
+          font-size: $fz5;
+          font-family: $altFont;
+          font-weight: $bold;
+          line-height: $mainLineHeight;
+          font-style: italic;
+          margin-bottom: 20px;
+        }
+        & .button{
+          & a.btn{
+            color: $black;
+            background-color: transparent;
+            border: 1px solid $green;
+            padding: 0 70px 0 45px;
+            background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (min-width: smDesktopWidth){
+@media (min-width: $smDesktopWidth){
   section.doctors{
     margin-bottom: 65px;
+    & .container{
+      padding-top: 100px;
+      background-image: url('/assets/img/bg/doctors-desktop-bg.jpg');
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: repeat;
+      & .tabs{
+        display: flex;
+        align-items: flex-start;
+        & .part{
+          &:first-child{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            padding-right: 30px;
+            border-right: 1px solid $white;
+            & h2.title {
+              font-size: $fz10;
+              &::before {
+                background-image: url('/assets/img/icons/icon-title-black.svg');
+              }
+            }
+            & ul.tab__list{
+              text-align: center;
+              & li.tab{
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+                position: relative;
+                & a{
+                  font-size: $fz7;
+                  text-transform: uppercase;
+                  &.active{
+                    color: $orange;
+                  }
+                }
+                &::after{
+                  display: block;
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  margin: auto;
+                  width: 50%;
+                  height: 1px;
+                  background-color: $borderColor;
+                }
+                &:last-child{
+                  &::after{
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child{
+            width: 70%;
+            padding-left: 30px;
+            & .person{
+              display: flex;
+              & .content{
+                display: flex;
+                flex-direction: column;
+                background-color: transparent;
+                width: 55%;
+                padding-bottom: 80px;
+                & h3.title {
+                  font-size: $fz11;
+                  margin-bottom: 40px;
+                }
+                & p.subtitle {
+                  font-size: $fz6;
+                  letter-spacing: $ls1;
+                  margin-bottom: 40px;
+                  color: $green;
+                  font-weight: $bold;
+                }
+                & p.about {
+                  font-style: italic;
+                  margin-bottom: 40px;
+                  font-size: $fz6;
+                  font-family: $altFont;
+                  font-weight: $bold;
+                }
+                & .button{
+                  text-align: left;
+                  & a.btn{
+                    border: 1px solid $green;
+                    background-color: transparent;
+                    color: $black;
+                    padding: 0 85px 0 50px;
+                    background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
+                  }
+                }
+              }
+              & .pic{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktopWidth){
+  section.doctors{
+    & .container{
+      padding: 100px 5% 0;
+      & .tabs{
+        & .part{
+          &:first-child{
+            padding-right: 50px;
+          }
+          &:last-child{
+            padding-left: 50px;
+            & .person{
+              & .content{
+                & h3.title {
+                  font-size: $fz40;
+                }
+                & p.subtitle {
+                  font-size: $fz6;
+                }
+                & p.about {
+                  font-size: $fz11;
+                }
+              }
+              & .pic{
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
