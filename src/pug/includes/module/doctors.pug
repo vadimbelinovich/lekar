@@ -38,20 +38,20 @@ section.doctors
           .button
             a.btn(href="") подробнее
     .tabs.visible__md
-      .part(data-tabgroup="first-tab-group")
+      .part
         h2.title врачи клиники
-        ul.tab__list
+        ul.tab__list(data-tabgroup="first-tab-group")
           li.tab
             a.active(href="#tab1") 
               | Альтмарк 
               br
               | Екатерина Михайловна
           li.tab
-            a(href="#tab2") 
+            a(href="#tab2")
               | Малашенкова 
               br
               | Надежда Владимировна
-      .part#first-tab-group
+      .part.tabgroup#first-tab-group
         .person#tab1
           .content
             h3.title 
@@ -70,19 +70,19 @@ section.doctors
               a.btn(href="") подробнее
           .pic
             img(src="./assets/img/doctors/doctor-2.png", alt="img")
-        //- .person#tab2
-        //-   .content
-        //-     h3.title
-        //-       | Иванова 
-        //-       br
-        //-       | Инесса Евгеньевна
-        //-     p.subtitle 
-        //-       | ОСТЕОПАТ, ХИРУРГ
-        //-     p.about 
-        //-       | закончила Ленинградский Педиатрический медицинский институт, 
-        //-       | Европейскую школу остеопатии (Мейдстоун, Великобритания), 
-        //-       | прошла обучения в школе остеопатии (Франция).
-        //-     .button
-        //-       a.btn(href="") подробнее
-        //-   .pic
-        //-     img(src="./assets/img/doctors/doctor-2.png", alt="img")
+        .person#tab2
+          .content
+            h3.title
+              | Иванова 
+              br
+              | Инесса Евгеньевна
+            p.subtitle 
+              | ОСТЕОПАТ, ХИРУРГ
+            p.about 
+              | закончила Ленинградский Педиатрический медицинский институт, 
+              | Европейскую школу остеопатии (Мейдстоун, Великобритания), 
+              | прошла обучения в школе остеопатии (Франция).
+            .button
+              a.btn(href="") подробнее
+          .pic
+            img(src="./assets/img/doctors/doctor-2.png", alt="img")
