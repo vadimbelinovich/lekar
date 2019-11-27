@@ -49,7 +49,7 @@ main.main{
         z-index: 1;
         & span{
           display: block;
-          height: 48px;
+          height: 20px;
           width: 100%;
           background-size: 35% auto;
           background-position: 50% 100%;
@@ -222,7 +222,8 @@ main.main{
         & .content{
           & p{
             &.text-1{
-              font-size: $fz6;
+              font-size: $fz7;
+              text-transform: uppercase;
             }
             &.text-2{
               font-size: $fz12;
