@@ -81,7 +81,7 @@ section.doctors{
         display: flex;
         align-items: flex-start;
         align-items: stretch;
-        min-height: 850px;
+        min-height: 920px;
         & .part{
           width: 50%;
           &:first-child{
@@ -141,7 +141,7 @@ section.doctors{
                 padding-top: 70px;
                 padding-bottom: 80px;
                 background-size: cover;
-                background-position: 0 0;
+                background-position: 45% 0;
                 background-repeat: no-repeat;
                 background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-1.jpg');
                 &>*{
@@ -203,7 +203,7 @@ section.doctors{
   section.doctors{
     & .container{
       & .tabs{
-        min-height: 980px;
+        min-height: 1135px;
         & .part{
           &:last-child{
             & .person{
@@ -235,7 +235,7 @@ section.doctors{
   section.doctors{
     & .container{
       & .tabs{
-        min-height: 700px;
+        min-height: 850px;
         & .part{
           &:last-child{
             & .person{

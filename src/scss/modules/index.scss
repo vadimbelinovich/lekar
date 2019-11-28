@@ -112,6 +112,22 @@ main.main{
             background-image: url('/assets/img/main-slider/item-2.jpg');
           }
         }
+        &::after{
+          display: block;
+          position: absolute;
+          content: '';
+          left: 0%;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 70%;
+          height: 100%;
+          background-image: url('/assets/img/bg/main-frame.png');
+          background-size: contain;
+          background-position: 50%;
+          background-repeat: no-repeat;
+        }
       }
     }
     p.descr{
@@ -187,6 +203,12 @@ main.main{
           }
           & span{
             height: 20px;
+          }
+        }
+        & ul.list{
+          &::after{
+            left: -5%;
+            width: 110%;
           }
         }
       }
