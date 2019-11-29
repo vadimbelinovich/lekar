@@ -15,6 +15,7 @@ ul.socials{
       background-size: 50% 50%;
       background-position: 50%;
       background-repeat: no-repeat;
+      background-color: $vk;
       background-image: url('/assets/img/icons/socials/icon-vk.svg');
       & img{
         max-width: 45%;
@@ -23,16 +24,19 @@ ul.socials{
     &:nth-child(2){
       & a{
         background-image: url('/assets/img/icons/socials/icon-fb.svg');
+        background-color: $fb;
       }
     }
     &:nth-child(3){
       & a{
-        background-image: url('/assets/img/icons/socials/icon-insta.svg');
+        background: 50% 50% no-repeat url('/assets/img/icons/socials/icon-insta.svg'), radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        
       }
     }
     &:nth-child(4){
       & a{
         background-image: url('/assets/img/icons/socials/icon-whatsup.svg');
+        background-color: $whatsup;
       }
     }
   }

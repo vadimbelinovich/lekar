@@ -1,0 +1,17 @@
+section.map{
+  padding: 0 20px;
+  & .container{
+    padding: 0;
+    border: 2px solid $green;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  section.map{
+    padding: 0 67px;
+    & .container{
+      padding: 0;
+      border: 5px solid $green;
+    }
+  }
+}

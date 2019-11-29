@@ -69,7 +69,6 @@ section.categories{
           margin-bottom: 0px;
           margin-right: 40px;
           border-radius: 50%;
-          overflow: hidden;
           & a{
             position: relative;
             display: flex;
@@ -90,6 +89,7 @@ section.categories{
               letter-spacing: $ls1;
               color: $white;
               transition: .2s;
+              border-radius: 50%;
               &:last-child{
                 display: flex;
                 flex-direction: column;

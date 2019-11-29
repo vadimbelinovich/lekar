@@ -77,6 +77,7 @@ section.doctors{
       background-size: cover;
       background-position: 50%;
       background-repeat: repeat;
+      position: relative;
       & .tabs{
         display: flex;
         align-items: flex-start;
@@ -195,6 +196,19 @@ section.doctors{
           }
         }
       }
+      &::after{
+        display: block;
+        position: absolute;
+        content: '';
+        left: -130px;
+        top: -160px;
+        width: 212px;
+        height: 587px;
+        background-image: url('/assets/img/flowers/flower-3.png');
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
@@ -258,6 +272,10 @@ section.doctors{
             }
           }
         }
+      }
+      &::after{
+        left: -50px;
+        top: -220px;
       }
     }
   }
