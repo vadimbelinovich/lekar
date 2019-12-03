@@ -98,6 +98,7 @@ section.biography{
 
 @media (min-width: $tablet){
   main.doctor__main{
+    margin-bottom: 0;
     & .container{
       flex-direction: row;
       align-items: stretch;
@@ -105,9 +106,10 @@ section.biography{
         width: 50%;
         &:nth-child(1){
           & h1.title{
-            padding-top: 3em;
+            padding-top: 0;
             &::before{
               height: 18px;
+              top: -3em;
             }
           }
           & p.subtitle{
