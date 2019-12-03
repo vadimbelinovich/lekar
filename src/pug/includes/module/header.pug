@@ -1,6 +1,6 @@
 header.header
   .container
-    a.logo.hidden__md
+    a.logo.hidden__md(href="/")
       img(src="./assets/img/icons/icon-logo.svg", alt="logo")
     h3.title.hidden__md
       | Клиника остеопатии
@@ -15,8 +15,11 @@ header.header
               img(src="./assets/img/icons/icon-logo.svg", alt="logo")
           li.item
             a.link(href="") о клинике
-          li.item
+          li.item.visible__md
             a.link(href="") врачи
+            ul.doctors__list
+              li.doctor
+                a(href="/doctor-1.html") Альтмарк Екатерина Михайловна
           li.item
             a.link(href="") услуги
           li.item

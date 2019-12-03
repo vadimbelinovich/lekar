@@ -122,6 +122,8 @@ h2.title {
   display: none;
 }
 
+@import "modules/doctor-page.scss";
+
 @import "modules/header.scss";
 
 @import "modules/menu.scss";
@@ -167,6 +169,10 @@ h2.title {
 
   .visible__md{
     display: block;
+  }
+
+  h1.title {
+    font-size: $fz14;
   }
 
   h2.title{

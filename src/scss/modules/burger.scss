@@ -103,7 +103,7 @@
       width: 100%;
       & li{
         transition: .2s;
-        height: 12.6%;
+        height: 14.28%;
         display: flex;
         text-align: center;
         align-items: center;
@@ -229,7 +229,13 @@
             height: 100%;
             display: flex;
             align-items: center;
-            &:hover,
+            &:hover{
+              color: $green;
+            }
+            &:hover + ul.doctors__list{
+              display: block;
+              opacity: 1;
+            }
             &:active{
               color: $orange;
             }
@@ -254,6 +260,36 @@
           }
           &.visible__md{
             display: flex;
+          }
+          & ul.doctors__list{
+            display: none;
+            position: absolute;
+            top: 62px;
+            background-color: $white;
+            padding: 5px 20px;
+            width: 160px;
+            height: auto;
+            transition: .2s;
+            & li.doctor{
+              border-bottom: 1px solid $borderColor;
+              & a{
+                font-size: $fz4;
+                text-align: left;
+                text-transform: capitalize;
+                font-weight: $medium;
+                padding: 14px 0;
+              }
+              &::after{
+                display: none;
+              }
+              &:last-child{
+                border-bottom: none;
+              }
+            }
+            &:hover{
+              display: block;
+              opacity: 1;
+            }
           }
         }
       }

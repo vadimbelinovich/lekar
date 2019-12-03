@@ -61,7 +61,12 @@ footer.footer {
         }
       }
     }
-    &:first-child{
+    &:nth-child(2){
+      & .container{
+        padding: 0;
+      }
+    }
+    &:nth-last-child(2){
       & .container{
         &::before{
           display: block;
@@ -101,7 +106,7 @@ footer.footer {
   footer.footer {
     & .part{
       padding: 0 67px;
-      &:first-child{
+      &:nth-last-child(2){
         & .container{
           flex-direction: row;
           justify-content: center;
