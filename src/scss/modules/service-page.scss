@@ -1,4 +1,4 @@
-main.service__main{
+.service__main{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ main.service__main{
           bottom: 0;
           right: 20px;
           margin: auto;
-          width: 70%;
+          width: 48%;
           height: 90%;
           background-image: url('/assets/img/services/decor-main.svg');
           background-size: auto 100%;
@@ -48,7 +48,7 @@ main.service__main{
           bottom: 0;
           left: 20px;
           margin: auto;
-          width: 70%;
+          width: 48%;
           height: 90%;
           background-image: url('/assets/img/services/decor-main.svg');
           background-size: auto 100%;
@@ -67,7 +67,20 @@ main.service__main{
       font-size: $fz6;
     }
   }
-  
+  &.after--birth{
+    & .part{
+      &:last-child{
+        background-image: url('/assets/img/services/service-2.jpg');
+      }
+    }
+  }
+  &.after--operation{
+    & .part{
+      &:last-child{
+        background-image: url('/assets/img/services/service-3.jpg');
+      }
+    }
+  }
 }
 section.service__description{
   padding: 50px 20px;
@@ -135,10 +148,30 @@ section.service__description{
       }
     }
   }
+  &.after--operation{
+    background-image: none;
+    & .container{
+      & .content{
+        & .part{
+          padding-left: 0;
+          &:first-child {
+            & p{
+              letter-spacing: inherit;
+              text-transform: inherit;
+              font-size: $fz6;
+              &::before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: $tablet){
-  main.service__main{
+  .service__main{
     font-size: 10px;
     flex-direction: row;
     align-items: stretch;
@@ -161,13 +194,18 @@ section.service__description{
       }
       & h1.title,
       p.subtitle {
-        width: 70%;
+        width: 100%;
       }
       & h1.title{
         font-size: $fz14;
       }
       p.subtitle{
         font-size: $fz8;
+      }
+    }
+    &.after--operation{
+      & .part{
+        order: 1;
       }
     }
   }
@@ -199,15 +237,32 @@ section.service__description{
         }
       }
     }
+    &.after--operation{
+      & .container{
+        & .content{
+          & .part{
+            &:first-child {
+              & p{
+                font-size: $fz8;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (min-width: $smDesktopWidth) {
-  main.service__main{
+  .service__main{
     & .part{
       height: 600px;
       &:last-child{
         order: 1;
+      }
+      & h1.title,
+      p.subtitle {
+        width: 70%;
       }
     }
   }
