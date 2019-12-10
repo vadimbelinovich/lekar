@@ -387,7 +387,6 @@ section.about__content{
         padding: 70px 15%;
         & ul.list{
           & li.item{
-            width: auto;
             font-size: $fz6;
           }
         }
@@ -410,6 +409,20 @@ section.about__content{
         & .icons{
           & .container{
             padding: 0 15%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: lgDesktopWidth){
+  main.about__main{
+    & .part{
+      &:last-child{
+        & ul.list{
+          & li.item{
+            width: auto;
           }
         }
       }
