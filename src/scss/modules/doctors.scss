@@ -144,6 +144,7 @@ section.doctors{
                 background-size: cover;
                 background-position: 45% 0;
                 background-repeat: no-repeat;
+                width: 100%;
                 background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-1.jpg');
                 &>*{
                   width: 40%;

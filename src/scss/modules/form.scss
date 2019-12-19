@@ -97,8 +97,10 @@ form.form {
 }
 
 @media (min-width: $smDesktopWidth){
-  form.form{
+  .wpcf7{
     width: 55%;
+  }
+  form.form{
 
     & .form__field{
       & span{
