@@ -270,7 +270,7 @@
             position: absolute;
             top: 62px;
             background-color: $white;
-            padding: 5px 20px;
+            padding: 5px 15px;
             width: 160px;
             height: auto;
             & li.doctor{
@@ -281,6 +281,7 @@
                 text-transform: inherit;
                 font-weight: $medium;
                 padding: 14px 0;
+                width: 100%;
               }
               &::after{
                 display: none;

@@ -52,6 +52,18 @@ main.doctor__main{
         background-repeat: no-repeat;
         background-image: url('/assets/img/doctors/doctor-1.jpg');
       }
+      &.doctor-3{
+        background-image: url('/assets/img/doctors/doctor-3.jpg');
+      }
+      &.doctor-2{
+        background-image: url('/assets/img/doctors/doctor-2.jpg');
+      }
+      &.doctor-4{
+        background-image: url('/assets/img/doctors/doctor-4.jpg');
+      }
+      &.doctor-5{
+        background-image: url('/assets/img/doctors/doctor-5.jpg');
+      }
     }
   }
 }
