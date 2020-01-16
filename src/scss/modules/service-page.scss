@@ -150,6 +150,20 @@
       }
     }
   }
+  &.service-8{
+    & .part{
+      &:last-child{
+        background-image: url('/assets/img/services/service-8.jpg');
+      }
+    }
+  }
+  &.service-9{
+    & .part{
+      &:last-child{
+        background-image: url('/assets/img/services/service-9.jpg');
+      }
+    }
+  }
   &.hire{
     & .part{
       &:last-child{
@@ -176,6 +190,7 @@ section.service__description{
   background-image: url('/assets/img/flowers/flower-service.png');
   & .container{
     padding: 0;
+    max-width: 1000px;
     & h2.title{
       font-size: $fz7;
       text-transform: inherit;
@@ -446,6 +461,138 @@ section.service__description{
       }
     }
   }
+  &.service-8{
+    & .container{
+      & .content{
+        flex-direction: column;
+        margin-bottom: 0;
+        & ul.list{
+          padding-left: 25px;
+          margin-bottom: 60px;
+          & li.item{
+            margin-bottom: 20px;
+            & p{
+              letter-spacing: .15em;
+              text-transform: uppercase;
+              position: relative;
+              font-size: $fz3;
+              
+              &::before{
+                display: block;
+                position: absolute;
+                content: "";
+                left: -20px;
+                top: 5px;
+                width: 7px;
+                height: 7px;
+                background-image: url('/assets/img/icons/icon-title-black.svg');
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+              }
+            }
+            & span{
+              margin-top: 10px;
+              display: inline-block;
+              font-size: $fz4;
+            }
+          }
+        }
+        & .row{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 60px;
+          & .part{
+            padding-left: 0;
+            & p{
+              font-size: $fz3;
+              text-transform: inherit;
+              letter-spacing: inherit;
+              &::before{
+                display: none;
+              }
+            }
+            &:last-child{
+              margin-top: 20px;
+            }
+          }
+        }
+        &>p{
+          text-align: center;
+          font-size: $fz6;
+          margin-bottom: 20px;
+          & span{
+            color: $green;
+            font-weight: $bold;
+          }
+        }
+      }
+    }
+  }
+  &.service-9{
+    & .container{
+      & .content{
+        display: flex;
+        flex-direction: column;
+        & .part{
+          &:nth-child(2){
+            order: 1;
+            padding-left: 0;
+            & p.note{
+              text-align: center;
+              padding: 50px 0;
+              position: relative;
+              margin-bottom: 70px;
+              font-size: $fz6;
+              &::before{
+                display: block;
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                right: 0;
+                margin: auto;
+                width: 150px;
+                height: 18px;
+                background-size: contain;
+                background-position: 50% 0%;
+                background-repeat: no-repeat;
+                background-image: url('/assets/img/icons/icon-title.svg');
+              }
+              &::after{
+                display: block;
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 150px;
+                height: 18px;
+                background-size: contain;
+                background-position: 50% 100%;
+                background-repeat: no-repeat;
+                background-image: url('/assets/img/icons/icon-title.svg');
+                transform: rotateX(180deg);
+              }
+            }
+          }
+          &:nth-child(1){
+            order: 2;
+            &>p{
+              font-weight: $bold;
+              letter-spacing: inherit;
+              text-transform: inherit;
+              &::before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &.hire{
     background-image: none;
     & .container{
@@ -532,7 +679,9 @@ section.service__description{
         font-size: $fz8;
       }
     }
-    &.after--operation{
+    
+    &.after--operation,
+    &.service-9{
       & .part{
         order: 1;
       }
@@ -635,6 +784,74 @@ section.service__description{
           }
           & p.note{
             font-size: $fz8;
+          }
+        }
+      }
+    }
+    &.service-8{
+      & .container{
+        & .content{
+          & ul.list{
+            & li.item{
+              & p{
+                font-size: $fz6;
+              }
+              & span{
+                font-size: $fz6;
+              }
+            }
+          }
+          & .row{
+            flex-direction: row;
+            justify-content: space-between;
+            
+            & .part{
+              padding-left: 0;
+              width: 48%;
+              & p{
+                font-size: $fz8;
+                margin-bottom: 20px;
+              }
+              
+              &:last-child{
+                margin-top: 0;
+              }
+            }
+          }
+          &>p{
+            font-size: $fz8;
+          }
+        }
+      }
+    }
+    &.service-9{
+      background-image: none;
+      & .container{
+        & .content{
+          justify-content: space-between;
+          flex-direction: row;
+          align-items: center;
+          
+          & .part{
+            &:nth-child(1){
+              order: 1;
+              &>p{
+                font-size: $fz8;
+              }
+              & ul.list{
+                & li.item{
+                  & p{
+                    font-size: $fz6;
+                  }
+                }
+              }
+            }
+            &:nth-child(2){
+              order: 2;
+              & p.note{
+                font-size: $fz14;
+              }
+            }
           }
         }
       }
