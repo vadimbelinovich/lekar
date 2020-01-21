@@ -10,6 +10,7 @@ function scroll() {
     } else {
       wrapper.classList.remove('no-scroll');
       phone.style.zIndex = 1;
+      document.querySelector('.list__pages').classList.remove('show')
     }
   })
 } 

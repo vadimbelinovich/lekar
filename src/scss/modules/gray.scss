@@ -49,7 +49,7 @@
               margin-bottom: 10px;
               display: block;
               &:nth-child(odd){
-                background-color: $borderColor;
+                background-color: rgba(55,137,64,.3);
               }
               & td{
                 border: none;
@@ -91,6 +91,7 @@
           }
         }
         &:last-child{
+          margin-bottom: 0;
           & table {
             & tbody{
               & tr {
@@ -215,6 +216,7 @@
         }
       }
       &.confidential{
+        max-width: 950px;
         & h1.title {
           text-align: center;
           color: $green;

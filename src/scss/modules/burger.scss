@@ -101,13 +101,15 @@
       text-align: center;
       flex: auto;
       width: 100%;
+      padding: 0 10px;
+      position: relative;
       & li{
         transition: .2s;
         height: 16.66%;
         display: flex;
         text-align: center;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
         & a{
           font-size: $fz5;
@@ -119,7 +121,7 @@
           transition: .2s;
           &:hover,
           &:active{
-            color: $black;
+            color: $white;
           }
           
         }
@@ -130,10 +132,8 @@
           display: block;
           position: absolute;
           content: '';
-          left: 0;
-          right: 0;
+          left: 4px;
           bottom: -4px;
-          margin: auto;
           width: 8px;
           height: 8px;
           background-image: url('/assets/img/icons/icon-menu.svg');
@@ -141,13 +141,40 @@
           background-position: 50%;
           background-repeat: no-repeat;
         }
-        &:last-child{
+        &:last-child,
+        &:nth-last-child(2){
           &::after{
             display: none;
           }
         }
         &.visible__md{
           display: none;
+        }
+      }
+      & li.list__pages{
+        position: absolute;
+        right: -100%;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        transition: .2s;
+        & ul.pages{
+          height: 85%;
+          & li.item__page{
+            justify-content: flex-start;
+            & a{
+              font-size: $fz3;
+              text-align: left;
+              font-weight: $medium;
+              text-transform: inherit;
+            }
+            &::after{
+              display: none;
+            }
+          }
+        }
+        &.show{
+          right: 0;
         }
       }
     }
@@ -226,6 +253,7 @@
           height: auto;
           flex-grow: 1;
           height: 100%;
+          justify-content: center;
           & a{
             font-size: $fz7;
             color: $black;
@@ -254,6 +282,7 @@
             left: auto;
             bottom: 0;
             top: 0;
+            margin: auto;
             background-image: url('/assets/img/icons/icon-menu-gray.svg');
           }
           &:last-child{
@@ -295,6 +324,9 @@
               opacity: 1;
             }
           }
+        }
+        & li.list__pages{
+          display: none;
         }
       }
     }
