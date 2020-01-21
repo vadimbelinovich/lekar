@@ -1,0 +1,27 @@
+extends ../layout/contacts_layout
+
+block content
+  .content.contacts
+    h2.title Режим работы
+    .row
+      .part
+        p 
+          | Клиника "Лекарь" работает 
+          span.orange ежедневно
+        .shedule
+          .row
+            span.day пн. - сб.
+            span.time 9:00 - 20:00
+          .row
+            span.day вс.
+            span.time 10:00 - 19:00
+      .part
+        .soc
+          include ../includes/module/socials
+        .details
+          a(href="telto:+79819980535") +7 (981) 998 05 35
+          a(href="mailto:mail@lekarspb.ru") mail@lekarspb.ru
+    p 
+      | Мы находимся в 5 минутах ходьбы от метро "Чкаловская".  
+      br
+      b ул. Корпусная, 9

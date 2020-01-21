@@ -2,7 +2,10 @@ header.header {
   padding: 10px 0;
   height: 67px;
   width: 100%;
-
+  position: fixed;
+  background-color: $white;
+  top: 0;
+  z-index: 1;
   & .container{
     display: flex;
     align-items: center;

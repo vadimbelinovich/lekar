@@ -3,7 +3,7 @@
   margin-bottom: 20px;
   & .container{
     padding: 20px 10px;
-    background-image: url('/assets/img/bg/doctors-bg.jpg');
+    background-image: url('/assets/img/bg/paper.jpg');
     background-size: cover;
     background-position: 50%;
     & .content{
@@ -90,6 +90,21 @@
             }
           }
         }
+        &:last-child{
+          & table {
+            & tbody{
+              & tr {
+                & td{
+                  &:nth-child(2){
+                    &::before{
+                      content: "Скидка";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       &::before{
         display: block;
@@ -118,6 +133,102 @@
         background-position: 0% 100%;
         background-repeat: no-repeat;
         transform: rotate(0deg);
+      }
+      &.contacts{
+        max-width: 620px;
+        & h2.title{
+          text-align: center;
+          margin-bottom: 60px;
+          padding-top: 0;
+          font-weight: $medium;
+          text-transform: inherit;
+          letter-spacing: inherit;
+          font-size: $fz12;
+          &::before{
+            display: none;
+          }
+        }
+        & .row{
+          display: flex;
+          flex-direction: column;
+          & .part{
+            margin-bottom: 60px;
+            & p{
+              text-transform: uppercase;
+              font-weight: $bold;
+              border-bottom: 1px solid $borderColor;
+              padding-bottom: 15px;
+              margin-bottom: 20px;
+              letter-spacing: $ls1;
+              & span.orange{
+                color: $orange;
+              }
+            }
+            & .shedule{
+              display: flex;
+              flex-direction: column;
+              & .row{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                align-items: flex-end;
+                & span{
+                  display: inline-block;
+                  font-weight: $bold;
+                  &.day{
+                    width: 40%;
+                    text-transform: uppercase;
+                  }
+                  &.time{
+                    color: $green;
+                    font-size: $fz11;
+                  }
+                }
+                &:nth-child(1){
+                  margin-bottom: 20px;
+                }
+              }
+            }
+            & .details{
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              & a{
+                font-weight: $bold;
+                font-size: $fz11;
+                color: $black;
+                &:nth-child(1){
+                  margin-bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+        & p{
+          text-transform: uppercase;
+          letter-spacing: $ls1;
+          text-align: center;
+        }
+        &::before,
+        &::after{
+          display: none;
+        }
+      }
+      &.confidential{
+        & h1.title {
+          text-align: center;
+          color: $green;
+          margin-bottom: 60px;
+        }
+        & p{
+          font-size: $fz8;
+          margin-bottom: 30px;
+          position: relative;
+          & a{
+            display: inline-block;
+            font-weight: $bold;
+          }
+        }
       }
     }
   }
@@ -224,6 +335,71 @@
           }
           &:last-child{
             margin-bottom: 0;
+          }
+        }
+        &.contacts{
+          & h2.title{
+            font-size: $fz14;
+          }
+          & .row{
+            flex-direction: row;
+            justify-content: space-between;
+            & .part{
+              margin-bottom: 60px;
+              width: 45%;
+              & p{
+                text-transform: uppercase;
+                font-weight: $bold;
+                border-bottom: 1px solid $borderColor;
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+                text-align: left;
+                & span.orange{
+                  color: $orange;
+                }
+              }
+              & .shedule{
+                display: flex;
+                flex-direction: column;
+                & .row{
+                  display: flex;
+                  align-items: center;
+                  flex-direction: row;
+                  & span{
+                    display: inline-block;
+                    font-weight: $bold;
+                    &.day{
+                      width: 40%;
+                    }
+                    &.time{
+                      color: $green;
+                    }
+                  }
+                }
+              }
+              & .soc{
+                min-height: 56px;
+                margin-bottom: 20px;
+                & ul.socials{
+                  justify-content: flex-start;
+                  & li.item{
+                    margin-right: 20px;
+                  }
+                }
+              }
+              & .details{
+                text-align: left;
+                & a{
+                  &:nth-child(1){
+                    margin-bottom: 20px;
+                  }
+                }
+              }
+            }
+          }
+          &::before,
+          &::after{
+            display: none;
           }
         }
       }

@@ -56,7 +56,20 @@ footer.footer {
         &:last-child{
           margin-bottom: 0;
           & .button{
-            margin-bottom: 0;
+            margin-bottom: 20px;
+          }
+          & .conf{
+            text-align: center;
+            width: 100%;
+            & a{
+              border-bottom: 1px solid $black;
+              display: inline-block;
+              font-size: $fz3;
+              transition: .2s;
+              &:hover{
+                border-bottom: 1px solid transparent;
+              }
+            }
           }
         }
       }
@@ -154,10 +167,9 @@ footer.footer {
             }
             &:nth-last-child(2) {
               display: flex;
-              justify-content: space-between;
               flex-direction: column;
               & .contacts{
-                margin-bottom: 0;
+                margin-bottom: 20px;
                 text-align: left;
                 display: flex;
                 flex-direction: column;
@@ -193,6 +205,14 @@ footer.footer {
             height: 170%;
             background-position: 0 0;
             background-size: cover;
+          }
+        }
+        & .map{
+          & .container{
+            padding: 0;
+            & #gmap{
+              width: 100%;
+            }
           }
         }
       }
