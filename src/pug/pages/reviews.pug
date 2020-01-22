@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block content
+  main.reviews__main
+    .content
+      h1.title Отзывы благодарных пациентов
+      p Мы ценим каждый ваш отзыв!
+  section.reviews__content
+    ul.review__list
+      li.review__item
+        img(src="./assets/img/reviews/review-1.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-6.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-2.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-7.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-3.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-8.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-12.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-4.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-9.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-5.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-10.jpg", alt="review")
+    ul.review__list.visible__md
+      li.review__item
+        img(src="./assets/img/reviews/review-13.jpg", alt="review")
+      li.review__item
+        img(src="./assets/img/reviews/review-11.jpg", alt="review")
+  section.review__social
+    p.title Больше отзывов читайте на наших страницах в соцсетях
+    .soc
+      include ../includes/module/socials
+  section.review__new 
+    .button
+      a.btn Оставить отзыв
+    .content
+      include ../includes/module/new_review
+    

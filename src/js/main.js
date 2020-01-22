@@ -14,3 +14,19 @@ clickService.addEventListener('click', function(e) {
   e.preventDefault()
   listPages.classList.toggle('show')
 })
+
+
+// const reviewNewButton = document.querySelector('.review__new .button a.btn');
+// const reviewItemImg = reviewNew.querySelector('.review__item img');
+
+if($('.review__new .button a.btn').length) {
+  $('.review__new .button a.btn').on('click', function() {
+    if($('.review__new .content.show').length){
+      $('.review__new .content').slideUp().removeClass('show');
+    } else {
+      $('.review__new .content').slideDown().addClass('show');
+    }
+    
+    console.log(1);
+  })
+} 

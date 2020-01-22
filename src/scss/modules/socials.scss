@@ -1,9 +1,13 @@
 ul.socials{
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  margin: 0 auto 30px;
   align-items: center;
+  max-width: 200px;
+  width: 100%;
   & li.item{
+    width: 25%;
+    text-align: center;
     & a{
       width: 32px;
       height: 32px;
@@ -11,6 +15,7 @@ ul.socials{
       background-color: $orange;
       border-radius: 50%;
       display: block;
+      margin: auto;
       font-size: 0;
       background-size: 50% 50%;
       background-position: 50%;
