@@ -252,6 +252,30 @@ main.appointment{
         }
       }
     }
+    & .panel{
+      max-width: 1070px;
+      margin: auto;
+      font-size: $fz6;
+      border-radius: 5px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+      margin-bottom: 20px;
+      padding: 0 10px;
+      & .panel-heading{
+        background-color: rgba(55,137,64,.3);
+        padding: 10px;
+        color: $green;
+      }
+      & .panel-body{
+        background-color: $white;
+        padding: 10px;
+      }
+      &.alert-danger{
+        & .panel-heading{
+          background-color: rgba(255,0,57,.2);
+          color: $red;
+        }
+      }
+    }
   }
 }
 
