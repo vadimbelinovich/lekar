@@ -21,6 +21,7 @@ clickService.addEventListener('click', function(e) {
 
 if($('.review__new .button a.btn').length) {
   $('.review__new .button a.btn').on('click', function() {
+    $(this).toggleClass('show')
     if($('.review__new .content.show').length){
       $('.review__new .content').slideUp().removeClass('show');
     } else {

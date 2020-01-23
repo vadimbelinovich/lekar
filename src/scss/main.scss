@@ -109,6 +109,7 @@ h2.title {
     font-size: $fz3;
     font-weight: $bold;
     text-transform: uppercase;
+    
     &:hover{
       background-position: 92% 50%;
     }
@@ -122,6 +123,8 @@ h2.title {
 .visible__md {
   display: none;
 }
+
+@import "modules/timetable.scss";
 
 @import "modules/review.scss";
 
