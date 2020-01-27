@@ -553,6 +553,7 @@
               width: 50%;
               & a {
                 padding-left: 80px;
+                min-height: 34px;
                 &::before {
                   width: 60px;
                   height: 60px;
@@ -582,6 +583,9 @@
             & li.item {
               width: 33.33%;
               padding-right: 20px;
+              & a {
+                min-height: 51px;
+              }
             }
           }
         }
