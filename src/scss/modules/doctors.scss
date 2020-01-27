@@ -1,45 +1,45 @@
-section.doctors{
+section.doctors {
   margin-bottom: 20px;
-  & .container{
+  & .container {
     padding: 0;
-    & ul.list{
-      background-image: url('/assets/img/bg/doctors-bg.jpg');
+    & ul.list {
+      background-image: url("/assets/img/bg/doctors-bg.jpg");
       background-size: cover;
       background-position: 50%;
       background-repeat: repeat;
-      & .pic{
+      & .pic {
         background-color: $lightGreen;
         height: 250px;
         font-size: 0;
         text-align: center;
         width: 100%;
         padding-top: 100%;
-        background-image: url('/assets/img/doctors/doctor-1.jpg');
+        background-image: url("/assets/img/doctors/doctor-1.jpg");
         background-size: cover;
         background-position: 50% 0;
         background-repeat: no-repeat;
         overflow: hidden;
-        &.pic-2{
-          background-image: url('/assets/img/doctors/doctor-2.jpg');
+        &.pic-2 {
+          background-image: url("/assets/img/doctors/doctor-2.jpg");
         }
-        &.pic-3{
-          background-image: url('/assets/img/doctors/doctor-3.jpg');
+        &.pic-3 {
+          background-image: url("/assets/img/doctors/doctor-3.jpg");
         }
-        &.pic-4{
-          background-image: url('/assets/img/doctors/doctor-4.jpg');
+        &.pic-4 {
+          background-image: url("/assets/img/doctors/doctor-4.jpg");
         }
-        &.pic-5{
-          background-image: url('/assets/img/doctors/doctor-5.jpg');
+        &.pic-5 {
+          background-image: url("/assets/img/doctors/doctor-5.jpg");
         }
       }
-      & .content{
+      & .content {
         padding: 45px 20px 30px;
         background-color: transparent;
-        & h3.title{
+        & h3.title {
           font-size: $fz10;
           margin-bottom: 20px;
         }
-        & p.subtitle{
+        & p.subtitle {
           color: $green;
           font-size: $fz2;
           font-weight: $bold;
@@ -55,13 +55,13 @@ section.doctors{
           font-style: italic;
           margin-bottom: 20px;
         }
-        & .button{
-          & a.btn{
+        & .button {
+          & a.btn {
             color: $black;
             background-color: transparent;
             border: 1px solid $green;
             padding: 0 70px 0 45px;
-            background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
+            background-image: url("/assets/img/icons/icon-btn-arrow-black.svg");
           }
         }
       }
@@ -69,23 +69,29 @@ section.doctors{
   }
 }
 
-@media (min-width: $smDesktopWidth){
-  section.doctors{
+@media (min-width: $tablet) {
+  section.doctors {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  section.doctors {
     margin-bottom: 65px;
-    & .container{
-      background-image: url('/assets/img/bg/doctors-desktop-bg.jpg');
+    & .container {
+      background-image: url("/assets/img/bg/doctors-desktop-bg.jpg");
       background-size: cover;
       background-position: 50%;
       background-repeat: repeat;
       position: relative;
-      & .tabs{
+      & .tabs {
         display: flex;
         align-items: flex-start;
         align-items: stretch;
         min-height: 920px;
-        & .part{
+        & .part {
           width: 50%;
-          &:first-child{
+          &:first-child {
             display: flex;
             flex-direction: column;
             border-right: 1px solid $white;
@@ -94,27 +100,27 @@ section.doctors{
             & h2.title {
               font-size: $fz10;
               &::before {
-                background-image: url('/assets/img/icons/icon-title-black.svg');
+                background-image: url("/assets/img/icons/icon-title-black.svg");
               }
             }
-            & ul.tab__list{
+            & ul.tab__list {
               text-align: center;
-              & li.tab{
+              & li.tab {
                 padding-bottom: 25px;
                 margin-bottom: 25px;
                 position: relative;
-                & a{
+                & a {
                   font-size: $fz7;
                   text-transform: uppercase;
                   cursor: pointer;
-                  &.active{
+                  &.active {
                     color: $orange;
                   }
                 }
-                &::after{
+                &::after {
                   display: block;
                   position: absolute;
-                  content: '';
+                  content: "";
                   left: 0;
                   right: 0;
                   bottom: 0;
@@ -123,19 +129,19 @@ section.doctors{
                   height: 1px;
                   background-color: $borderColor;
                 }
-                &:last-child{
-                  &::after{
+                &:last-child {
+                  &::after {
                     display: none;
                   }
                 }
               }
             }
           }
-          &:last-child{
-            & .person{
+          &:last-child {
+            & .person {
               display: flex;
               height: 100%;
-              & .content{
+              & .content {
                 display: flex;
                 flex-direction: column;
                 background-color: transparent;
@@ -145,8 +151,13 @@ section.doctors{
                 background-position: 45% 0;
                 background-repeat: no-repeat;
                 width: 100%;
-                background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-1.jpg');
-                &>*{
+                background-image: linear-gradient(
+                    90deg,
+                    #d7e7d9 0%,
+                    rgba(215, 231, 217, 0) 34.93%
+                  ),
+                  url("/assets/img/doctors/doctor-1.jpg");
+                & > * {
                   width: 40%;
                   margin-left: -15%;
                 }
@@ -168,44 +179,64 @@ section.doctors{
                   font-family: $altFont;
                   font-weight: $bold;
                 }
-                & .button{
+                & .button {
                   text-align: left;
                   position: relative;
-                  & a.btn{
+                  & a.btn {
                     border: 1px solid $green;
                     background-color: transparent;
                     color: $black;
                     padding: 0 85px 0 50px;
-                    background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
+                    background-image: url("/assets/img/icons/icon-btn-arrow-black.svg");
                   }
                 }
-                &.pic-2{
-                  background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-2.jpg');
+                &.pic-2 {
+                  background-image: linear-gradient(
+                      90deg,
+                      #d7e7d9 0%,
+                      rgba(215, 231, 217, 0) 34.93%
+                    ),
+                    url("/assets/img/doctors/doctor-2.jpg");
                 }
-                &.pic-3{
-                  background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-3.jpg');
+                &.pic-3 {
+                  background-image: linear-gradient(
+                      90deg,
+                      #d7e7d9 0%,
+                      rgba(215, 231, 217, 0) 34.93%
+                    ),
+                    url("/assets/img/doctors/doctor-3.jpg");
                 }
-                &.pic-4{
-                  background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-4.jpg');
+                &.pic-4 {
+                  background-image: linear-gradient(
+                      90deg,
+                      #d7e7d9 0%,
+                      rgba(215, 231, 217, 0) 34.93%
+                    ),
+                    url("/assets/img/doctors/doctor-4.jpg");
                 }
-                &.pic-5{
+                &.pic-5 {
                   background-position: 50% 0;
-                  background-image: linear-gradient(90deg, #D7E7D9 0%, rgba(215, 231, 217, 0) 34.93%), url('/assets/img/doctors/doctor-5.jpg');
+                  background-image: linear-gradient(
+                      90deg,
+                      #d7e7d9 0%,
+                      rgba(215, 231, 217, 0) 34.93%
+                    ),
+                    url("/assets/img/doctors/doctor-5.jpg");
                 }
               }
             }
           }
         }
       }
-      &::after{
+      &::after {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         left: -130px;
         top: -160px;
         width: 212px;
         height: 587px;
-        background-image: url('/assets/img/flowers/flower-3.png');
+        background-image: url("/assets/img/flowers/flower-3.png");
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
@@ -214,17 +245,16 @@ section.doctors{
   }
 }
 
-@media (min-width: $desktopWidth){
-  section.doctors{
-    & .container{
-      & .tabs{
+@media (min-width: $desktopWidth) {
+  section.doctors {
+    & .container {
+      & .tabs {
         min-height: 1135px;
-        & .part{
-          &:last-child{
-            & .person{
-              & .content{
-                
-                &>*{
+        & .part {
+          &:last-child {
+            & .person {
+              & .content {
+                & > * {
                   width: 50%;
                   margin-left: -15%;
                 }
@@ -246,17 +276,17 @@ section.doctors{
   }
 }
 
-@media (min-width: $lgDesktopWidth){
-  section.doctors{
-    & .container{
-      & .tabs{
+@media (min-width: $lgDesktopWidth) {
+  section.doctors {
+    & .container {
+      & .tabs {
         min-height: 850px;
-        & .part{
-          &:last-child{
-            & .person{
-              & .content{
+        & .part {
+          &:last-child {
+            & .person {
+              & .content {
                 background-position: 50% 20%;
-                &>*{
+                & > * {
                   width: 50%;
                   margin-left: -20%;
                 }
@@ -274,7 +304,7 @@ section.doctors{
           }
         }
       }
-      &::after{
+      &::after {
         left: -50px;
         top: -220px;
       }

@@ -38,19 +38,19 @@ a {
   margin: 0 auto;
 }
 
-.content{
+.content {
   background-color: $white;
 }
 
-main.main{
-  & P{
+main.main {
+  & p {
     color: $textColor;
   }
 }
 
 section,
 main,
-header{
+header {
   padding: 0 20px;
 }
 
@@ -71,17 +71,17 @@ h2.title {
   padding-top: 25px;
   position: relative;
   text-align: center;
-  &::before{
+  &::before {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 0;
     right: 0;
     margin: auto;
     width: 8px;
     height: 8px;
-    background-image: url('/assets/img/icons/icon-title-2.svg');
+    background-image: url("/assets/img/icons/icon-title-2.svg");
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -90,17 +90,17 @@ h2.title {
 
 .button {
   text-align: center;
-  & a.btn{
+  & a.btn {
     color: $white;
     display: inline-block;
     padding: 0 30px 0 15px;
     height: 45px;
     line-height: 45px;
-    transition: .2s;
+    transition: 0.2s;
     background-color: $green;
     cursor: pointer;
     text-align: center;
-    background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+    background-image: url("/assets/img/icons/icon-btn-arrow.svg");
     background-size: auto 13%;
     background-position: 90% 50%;
     background-repeat: no-repeat;
@@ -109,8 +109,8 @@ h2.title {
     font-size: $fz3;
     font-weight: $bold;
     text-transform: uppercase;
-    
-    &:hover{
+
+    &:hover {
       background-position: 92% 50%;
     }
   }
@@ -124,6 +124,10 @@ h2.title {
   display: none;
 }
 
+@import "modules/service-page.scss";
+
+@import "modules/about.scss";
+
 @import "modules/timetable.scss";
 
 @import "modules/review.scss";
@@ -132,13 +136,11 @@ h2.title {
 
 @import "modules/about.scss";
 
-@import "modules/service-page.scss";
-
 @import "modules/doctor-page.scss";
 
 @import "modules/header.scss";
 
-@import "modules/menu.scss";
+// @import "modules/menu.scss";
 
 @import "modules/burger.scss";
 
@@ -175,11 +177,11 @@ h2.title {
 }
 
 @media (min-width: $smDesktopWidth) {
-  .hidden__md{
+  .hidden__md {
     display: none;
   }
 
-  .visible__md{
+  .visible__md {
     display: block;
   }
 
@@ -187,17 +189,17 @@ h2.title {
     font-size: $fz14;
   }
 
-  h2.title{
+  h2.title {
     font-size: $fz40;
   }
 
-  .container{
+  .container {
     padding: 0 50px;
   }
 
   section,
   main,
-  header{
+  header {
     padding: 0 67px;
   }
 }

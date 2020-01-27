@@ -332,7 +332,7 @@ section.about__content{
                 &:nth-child(6){
                   margin-right: 2%;
                 }
-                &:nth-child(5){
+                &:nth-child(6){
                   margin-right: 0;
                 }
                 &:nth-child(6),
@@ -346,20 +346,6 @@ section.about__content{
                     transform: translateY(-5px);
                   }
                 }
-              }
-              &::before{
-                display: block;
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 95%;
-                height: 1px;
-                background-color: $white;
-                
               }
             }
           }

@@ -1,7 +1,7 @@
-section.message{
+section.message {
   margin-bottom: 20px;
-  & .container{
-    background-image: url('/assets/img/bg/contact-form-bg.jpg');
+  & .container {
+    background-image: url("/assets/img/bg/contact-form-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -9,34 +9,34 @@ section.message{
     position: relative;
     z-index: 0;
     overflow: hidden;
-    & h2.title{
+    & h2.title {
       color: $white;
-      &::before{
-        background-image: url('/assets/img/icons/icon-title-white.svg');
+      &::before {
+        background-image: url("/assets/img/icons/icon-title-white.svg");
       }
     }
-    &::before{
+    &::before {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       left: -15%;
       bottom: -15%;
       width: 110%;
       height: 40%;
-      background-image: url('/assets/img/flowers/message-leaf-1.png');
+      background-image: url("/assets/img/flowers/message-leaf-1.png");
       background-size: contain;
       background-position: 0% 100%;
       background-repeat: no-repeat;
     }
-    &::after{
+    &::after {
       display: block;
       position: absolute;
-      content: '';
+      content: "";
       right: -25%;
       top: 0%;
       width: 100%;
       height: 35%;
-      background-image: url('/assets/img/flowers/message-leaf-2.png');
+      background-image: url("/assets/img/flowers/message-leaf-2.png");
       background-size: contain;
       background-position: 100% 0%;
       background-repeat: no-repeat;
@@ -45,25 +45,31 @@ section.message{
   }
 }
 
-@media (min-width: $smDesktopWidth){
-  section.message{
+@media (min-width: $tablet) {
+  section.message {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  section.message {
     margin-bottom: 65px;
-    & .container{
+    & .container {
       display: flex;
       flex-direction: row;
       padding: 85px 10% 65px;
-      & h2.title{
+      & h2.title {
         margin-bottom: 0;
         padding: 0 10px 0 0;
         font-size: $fz10;
         font-weight: $medium;
         text-align: left;
         width: 45%;
-        &::before{
+        &::before {
           display: none;
         }
       }
-      &::before{
+      &::before {
         left: -10%;
         bottom: -8%;
         width: 50%;
@@ -71,7 +77,7 @@ section.message{
         background-position: 100% 0%;
         background-size: cover;
       }
-      &::after{
+      &::after {
         right: -2%;
         top: 0%;
         width: 20%;
@@ -82,12 +88,11 @@ section.message{
   }
 }
 
-
-@media (min-width: $desktopWidth){
-  section.message{
-    & .container{
+@media (min-width: $desktopWidth) {
+  section.message {
+    & .container {
       padding: 85px 15% 65px;
-      & h2.title{
+      & h2.title {
         font-size: $fz12;
         padding: 0 70px 0 0;
       }

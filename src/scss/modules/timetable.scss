@@ -279,6 +279,289 @@ main.appointment{
   }
 }
 
+@media (min-width: $tablet){
+  main.appointment{
+    padding: 0px 0px;
+    margin-bottom: 40px;
+    & .container{
+      background-image: url(/assets/img/bg/paper.jpg);
+      background-size: cover;
+      background-position: 50%;
+      padding: 0;
+      & h1.title{
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      & .timetable{
+        display: flex;
+        align-items: flex-start;
+        padding: 0 5px;
+        margin-bottom: 40px;
+        justify-content: center;
+        & aside.aside{
+          min-width: 100px;
+          margin-top: 30px;
+          & ul.list{
+            & li.item{
+              height: 100px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 5px 5px 5px 0;
+              border-bottom: 1px solid $violet;
+              & p{
+                font-size: $fz3;
+                font-weight: $bold;
+                &:nth-child(1){
+                  margin-bottom: 10px;
+                  font-size: $fz2;
+                  font-weight: $medium;
+                }
+                &:last-child{
+                  border-radius: 5px;
+                  color: rgba(55,137,64,1);
+                }
+              }
+              &:last-child{
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+        & section.days{
+          overflow-x: scroll;
+          padding: 0;
+          scrollbar-color: $green $white;
+          & .shedule{
+            white-space: nowrap;
+            & .header{
+              height: 30px;
+              & ul.list{
+                display: flex;
+                & li.item{
+                  min-width: 100px;
+                  text-align: center;
+                  & p{
+                    text-transform: uppercase;
+                    font-weight: $bold;
+                  }
+                }
+              }
+            }
+            & .room__dayline{
+              & .line{
+                & ul.cell__list{
+                  display: flex;
+                  & li.cell{
+                    height: 100px;
+                    min-width: 100px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-size: $fz3;
+                    cursor: default;
+                    border-right: 1px solid $white;
+                    border-bottom: 1px solid $violet;
+                    & span{
+                      display: block;
+                      &:nth-child(1) {
+                        margin-bottom: 10px;
+                        font-weight: $bold;
+                      }
+                    }
+                    &.green{
+                      background-color: rgba(55,137,64,.4);
+                      border-bottom: 1px solid $white;
+                    }
+                    &.red{
+                      background-color: rgba(255,0,57,.4);
+                      border-bottom: 1px solid $white;
+                    }
+                    &.yellow{
+                      background-color: rgba(252,208,0,.4);
+                      border-bottom: 1px solid $white;
+                    }
+                    &.active{
+                      cursor: pointer;
+                    }
+                  }
+                }
+                &:last-child{
+                  & ul.cell__list{
+                    & li.cell{
+                      border-bottom: 0px solid $white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+            background-color: #F5F5F5;
+            border-radius: 5px;
+          }
+          &::-webkit-scrollbar{
+            height: 10px;
+            background-color: #F5F5F5;
+          }
+          &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background-color: #FFF;
+            background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#4D9C41), to(#19911D), color-stop(.6,#54DE5D));
+          }
+        }
+        & .modal-container{
+          position: fixed;
+          display: flex;
+          height: 0;
+          width: 0;
+          top: 0;
+          left: 0;
+          transform: scale(0);
+          z-index: 1;
+          &.active{
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            background: rgba(0, 0, 0, .5);
+          }
+          & .modal-background{
+            margin: auto;
+            max-width: 90%;
+            & .modal{
+              display: inline-block;
+              border-radius: 3px;
+              font-weight: 300;
+              padding: 10px;
+              position: relative;
+              max-width: 300px;
+              background-color: $white;
+              & .content{
+                background-color: transparent;
+                & .title{
+                  text-align: center;
+                  color: $green;
+                  margin-bottom: 20px;
+                  padding-bottom: 20px;
+                  border-bottom: 1px solid $borderColor;
+                  & h2{
+                    font-size: $fz11;
+                    margin-bottom: 10px;
+                  }
+                  & p{
+                    color: $black;
+                  }
+                }
+                & .inner{
+                  padding: 0 20px;
+                  & form.form{
+                    & .field{
+                      & input.input{
+                        width: 100%;
+                        box-shadow: none;
+                        font-size: $fz4;
+                        color: $black;
+                        padding: 10px 15px;
+                        margin-bottom: 10px;
+                        box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,.3);
+                      }
+                    }
+                    & ul.time__box{
+                      height: 250px;
+                      overflow: auto;
+                      padding-top: 20px;
+                      & li.time__field{
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        & input.input__time{
+                          display: none;
+                        }
+                        & label{
+                          display: flex;
+                          padding: 10px 15px;
+                          justify-content: space-around;
+                          background-color: $gray2;
+                          color: $green;
+                          font-weight: $bold;
+                        }
+                      }
+                    }
+                    & .button{
+                      & input{
+                        padding: 0 30px 0 15px;
+                        height: 45px;
+                        line-height: 42px;
+                        transition: .2s;
+                        background-color: #378940;
+                        cursor: pointer;
+                        background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+                        background-size: auto 13%;
+                        background-position: 90% 50%;
+                        background-repeat: no-repeat;
+                        color: #fff;
+                        letter-spacing: .1em;
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        &:hover{
+                          background-position: 92% 50%;
+                        }
+                      }
+                    }
+                  }
+                }
+                &.hidden{
+                  display: none;
+                }
+              }
+              & .close{
+                text-align: right;
+                & a.btn{
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  background-image: url('/assets/img/icons/icon-close.svg');
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: 50%;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+      & .panel{
+        max-width: 1070px;
+        margin: auto;
+        font-size: $fz6;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        margin-bottom: 20px;
+        padding: 0 10px;
+        & .panel-heading{
+          background-color: rgba(55,137,64,.3);
+          padding: 10px;
+          color: $green;
+        }
+        & .panel-body{
+          background-color: $white;
+          padding: 10px;
+        }
+        &.alert-danger{
+          & .panel-heading{
+            background-color: rgba(255,0,57,.2);
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: $smDesktopWidth){
   main.appointment{
     padding: 0px 67px;

@@ -1,17 +1,17 @@
-.gray__content{
+.gray__content {
   padding: 0 20px;
   margin-bottom: 20px;
-  & .container{
+  & .container {
     padding: 20px 10px;
-    background-image: url('/assets/img/bg/paper.jpg');
+    background-image: url("/assets/img/bg/paper.jpg");
     background-size: cover;
     background-position: 50%;
-    & .content{
+    & .content {
       max-width: 800px;
       margin: auto;
       background-color: transparent;
       position: relative;
-      & .price__block{
+      & .price__block {
         margin-bottom: 50px;
         & h2.title {
           text-align: left;
@@ -21,7 +21,7 @@
           font-weight: $regular;
           text-transform: inherit;
           padding-top: 0;
-          &::before{
+          &::before {
             display: none;
           }
         }
@@ -34,24 +34,24 @@
               top: -9999px;
               left: -9999px;
               margin-bottom: 10px;
-              & th{
+              & th {
                 display: block;
                 font-weight: $regular;
               }
-              &:nth-child(odd){
+              &:nth-child(odd) {
                 background-color: $borderColor;
               }
             }
           }
-          & tbody{
+          & tbody {
             display: block;
             & tr {
               margin-bottom: 10px;
               display: block;
-              &:nth-child(odd){
-                background-color: rgba(55,137,64,.3);
+              &:nth-child(odd) {
+                background-color: rgba(55, 137, 64, 0.3);
               }
-              & td{
+              & td {
                 border: none;
                 border-bottom: 1px solid #eee;
                 position: relative;
@@ -59,7 +59,7 @@
                 display: block;
                 font-size: $fz3;
                 width: 100%;
-                &::before{
+                &::before {
                   position: absolute;
                   top: 50%;
                   content: "Услуга";
@@ -71,18 +71,18 @@
                   padding-right: 10px;
                   white-space: nowrap;
                 }
-                &:nth-child(1){
-                  &::before{
+                &:nth-child(1) {
+                  &::before {
                     content: "Услуга";
                   }
                 }
-                &:nth-child(2){
-                  &::before{
+                &:nth-child(2) {
+                  &::before {
                     content: "Цена, руб.";
                   }
                 }
-                &:nth-child(3){
-                  &::before{
+                &:nth-child(3) {
+                  &::before {
                     content: "Продолжительность";
                   }
                 }
@@ -90,14 +90,14 @@
             }
           }
         }
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
           & table {
-            & tbody{
+            & tbody {
               & tr {
-                & td{
-                  &:nth-child(2){
-                    &::before{
+                & td {
+                  &:nth-child(2) {
+                    &::before {
                       content: "Скидка";
                     }
                   }
@@ -107,37 +107,37 @@
           }
         }
       }
-      &::before{
+      &::before {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         top: 5%;
         right: 60%;
         width: 100%;
         height: 100%;
-        background-image: url('/assets/img/flowers/message-leaf-1.png');
+        background-image: url("/assets/img/flowers/message-leaf-1.png");
         background-size: contain;
         background-position: 100% 0;
         background-repeat: no-repeat;
         transform: rotate(-25deg);
       }
-      &::after{
+      &::after {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         bottom: -4%;
         left: 110%;
         width: 100%;
         height: 100%;
-        background-image: url('/assets/img/flowers/message-leaf-3.png');
+        background-image: url("/assets/img/flowers/message-leaf-3.png");
         background-size: contain;
         background-position: 0% 100%;
         background-repeat: no-repeat;
         transform: rotate(0deg);
       }
-      &.contacts{
+      &.contacts {
         max-width: 620px;
-        & h2.title{
+        & h2.title {
           text-align: center;
           margin-bottom: 60px;
           padding-top: 0;
@@ -145,104 +145,240 @@
           text-transform: inherit;
           letter-spacing: inherit;
           font-size: $fz12;
-          &::before{
+          &::before {
             display: none;
           }
         }
-        & .row{
+        & .row {
           display: flex;
           flex-direction: column;
-          & .part{
+          & .part {
             margin-bottom: 60px;
-            & p{
+            & p {
               text-transform: uppercase;
               font-weight: $bold;
               border-bottom: 1px solid $borderColor;
               padding-bottom: 15px;
               margin-bottom: 20px;
               letter-spacing: $ls1;
-              & span.orange{
+              & span.orange {
                 color: $orange;
               }
             }
-            & .shedule{
+            & .shedule {
               display: flex;
               flex-direction: column;
-              & .row{
+              & .row {
                 display: flex;
                 align-items: center;
                 flex-direction: row;
                 align-items: flex-end;
-                & span{
+                & span {
                   display: inline-block;
                   font-weight: $bold;
-                  &.day{
+                  &.day {
                     width: 40%;
                     text-transform: uppercase;
                   }
-                  &.time{
+                  &.time {
                     color: $green;
                     font-size: $fz11;
                   }
                 }
-                &:nth-child(1){
+                &:nth-child(1) {
                   margin-bottom: 20px;
                 }
               }
             }
-            & .details{
+            & .details {
               display: flex;
               flex-direction: column;
               text-align: center;
-              & a{
+              & a {
                 font-weight: $bold;
                 font-size: $fz11;
                 color: $black;
-                &:nth-child(1){
+                &:nth-child(1) {
                   margin-bottom: 10px;
                 }
               }
             }
           }
         }
-        & p{
+        & p {
           text-transform: uppercase;
           letter-spacing: $ls1;
           text-align: center;
         }
         &::before,
-        &::after{
+        &::after {
           display: none;
         }
       }
-      &.confidential{
+      &.confidential {
         max-width: 950px;
         & h1.title {
           text-align: center;
           color: $green;
           margin-bottom: 60px;
         }
-        & p{
+        & p {
           font-size: $fz8;
           margin-bottom: 30px;
           position: relative;
-          & a{
+          & a {
             display: inline-block;
             font-weight: $bold;
           }
+        }
+      }
+      &.services {
+        & h1.title {
+          color: $green;
+          text-transform: inherit;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        & ul.list {
+          & li.item {
+            margin-bottom: 30px;
+            & a {
+              color: $green;
+              text-transform: uppercase;
+              font-size: $fz4;
+              letter-spacing: $ls1;
+              font-weight: $bold;
+              padding-left: 70px;
+              display: inline-block;
+              position: relative;
+              &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 40px;
+                height: 40px;
+                background-image: url("/assets/img/icons/services/service-icon-1-black.svg");
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+              }
+              &:hover {
+                color: $orange;
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-1-orange.svg");
+                }
+              }
+            }
+            &:nth-child(2) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-2-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-2-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(3) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-3-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-3-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(4) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-4-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-4-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(5) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-5-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-5-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(6) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-6-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-6-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(7) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-7-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-7-orange.svg");
+                  }
+                }
+              }
+            }
+            &:nth-child(8) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-8-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-8-orange.svg");
+                  }
+                }
+              }
+            }
+          }
+        }
+        &::before {
+          top: 30%;
+          right: 120%;
+        }
+        &::after {
+          bottom: -4%;
+          left: 140%;
         }
       }
     }
   }
 }
 
-@media (min-width: $tablet){
-  .gray__content{
+@media (min-width: $tablet) {
+  .gray__content {
     margin-bottom: 50px;
-    & .container{
+    & .container {
       padding: 80px 10px;
-      & .content{
-        & .price__block{
+      & .content {
+        & .price__block {
           margin-bottom: 110px;
           & h2.title {
             font-size: $fz14;
@@ -258,31 +394,31 @@
                 top: inherit;
                 left: inherit;
                 margin-bottom: 0;
-                & th{
+                & th {
                   display: table-cell;
                   padding: 15px 0;
                   font-size: $fz6;
                   text-align: left;
                   color: transparent;
-                  &:nth-child(2){
+                  &:nth-child(2) {
                     padding-right: 60px;
                   }
                 }
-                &:nth-child(odd){
+                &:nth-child(odd) {
                   background-color: inherit;
                 }
               }
             }
-            & tbody{
+            & tbody {
               display: table-row-group;
               border-top: 1px solid $borderColor;
               & tr {
                 margin-bottom: 10px;
                 display: table-row;
-                &:nth-child(odd){
+                &:nth-child(odd) {
                   background-color: transparent;
                 }
-                & td{
+                & td {
                   position: relative;
                   border: none;
                   color: $green;
@@ -291,109 +427,109 @@
                   font-size: $fz11;
                   padding: 20px 0px;
                   white-space: nowrap;
-                  &:nth-child(2){
+                  &:nth-child(2) {
                     padding-right: 80px;
                   }
-                  &::before{
+                  &::before {
                     display: none;
                   }
-                  &:nth-child(1){
+                  &:nth-child(1) {
                     color: $black;
                     font-size: $fz6;
                     letter-spacing: $ls1;
                     text-transform: uppercase;
-                    &::before{
+                    &::before {
                       content: "Услуга";
                     }
                   }
-                  &:nth-child(2){
-                    &::before{
+                  &:nth-child(2) {
+                    &::before {
                       content: "Цена, руб.";
                     }
                   }
-                  &:nth-child(3){
-                    &::before{
+                  &:nth-child(3) {
+                    &::before {
                       content: "Продолжительность";
                     }
                   }
                 }
               }
             }
-          } 
+          }
           &:nth-child(1),
           &:last-child {
             & h2.title {
               margin-bottom: 35px;
             }
-            & table{
+            & table {
               & thead {
                 & tr {
-                  & th{
+                  & th {
                     color: #201e21;
                   }
                 }
               }
             }
           }
-          &:last-child{
+          &:last-child {
             margin-bottom: 0;
           }
         }
-        &.contacts{
-          & h2.title{
+        &.contacts {
+          & h2.title {
             font-size: $fz14;
           }
-          & .row{
+          & .row {
             flex-direction: row;
             justify-content: space-between;
-            & .part{
+            & .part {
               margin-bottom: 60px;
               width: 45%;
-              & p{
+              & p {
                 text-transform: uppercase;
                 font-weight: $bold;
                 border-bottom: 1px solid $borderColor;
                 padding-bottom: 15px;
                 margin-bottom: 20px;
                 text-align: left;
-                & span.orange{
+                & span.orange {
                   color: $orange;
                 }
               }
-              & .shedule{
+              & .shedule {
                 display: flex;
                 flex-direction: column;
-                & .row{
+                & .row {
                   display: flex;
                   align-items: center;
                   flex-direction: row;
-                  & span{
+                  & span {
                     display: inline-block;
                     font-weight: $bold;
-                    &.day{
+                    &.day {
                       width: 40%;
                     }
-                    &.time{
+                    &.time {
                       color: $green;
                     }
                   }
                 }
               }
-              & .soc{
+              & .soc {
                 min-height: 56px;
                 margin-bottom: 20px;
                 max-width: 200px;
-                & ul.socials{
+                & ul.socials {
                   justify-content: flex-start;
-                  & li.item{
+                  & li.item {
                     margin-right: 20px;
                   }
                 }
               }
-              & .details{
+              & .details {
                 text-align: left;
-                & a{
-                  &:nth-child(1){
+                & a {
+                  &:nth-child(1) {
                     margin-bottom: 20px;
                   }
                 }
@@ -401,8 +537,32 @@
             }
           }
           &::before,
-          &::after{
+          &::after {
             display: none;
+          }
+        }
+        &.services {
+          & h1.title {
+            margin-bottom: 70px;
+          }
+          & ul.list {
+            display: flex;
+            flex-wrap: wrap;
+            & li.item {
+              margin-bottom: 110px;
+              width: 50%;
+              & a {
+                padding-left: 80px;
+                &::before {
+                  width: 60px;
+                  height: 60px;
+                }
+              }
+              &:nth-last-child(1),
+              &:nth-last-child(2) {
+                margin-bottom: 0;
+              }
+            }
           }
         }
       }
@@ -410,8 +570,22 @@
   }
 }
 
-@media (min-width: $smDesktopWidth){
-  .gray__content{
+@media (min-width: $smDesktopWidth) {
+  .gray__content {
     padding: 0 67px;
+    & .container {
+      & .content {
+        &.services {
+          & h1.title {
+          }
+          & ul.list {
+            & li.item {
+              width: 33.33%;
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,17 +1,17 @@
-section.categories{
+section.categories {
   margin-bottom: 10px;
-  & .container{
+  & .container {
     padding: 0;
-    & ul.list{
+    & ul.list {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      & li.item{
+      & li.item {
         width: 47%;
         margin-bottom: 45px;
-        & a{
+        & a {
           display: block;
-          & .pic{
+          & .pic {
             border-radius: 50%;
             width: 100%;
             padding-top: 100%;
@@ -19,9 +19,9 @@ section.categories{
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
-            background-image: url('/assets/img/categories/category-1.jpg');
+            background-image: url("/assets/img/categories/category-1.jpg");
           }
-          & p{
+          & p {
             text-align: center;
             text-transform: uppercase;
             color: $green;
@@ -31,24 +31,24 @@ section.categories{
             line-height: $lineHeight4;
           }
         }
-        &:nth-child(2){
-          & a{
-            & .pic{
-              background-image: url('/assets/img/categories/category-2.jpg');
+        &:nth-child(2) {
+          & a {
+            & .pic {
+              background-image: url("/assets/img/categories/category-2.jpg");
             }
           }
         }
-        &:nth-child(3){
-          & a{
-            & .pic{
-              background-image: url('/assets/img/categories/category-3.jpg');
+        &:nth-child(3) {
+          & a {
+            & .pic {
+              background-image: url("/assets/img/categories/category-3.jpg");
             }
           }
         }
-        &:nth-child(4){
-          & a{
-            & .pic{
-              background-image: url('/assets/img/categories/category-4.jpg');
+        &:nth-child(4) {
+          & a {
+            & .pic {
+              background-image: url("/assets/img/categories/category-4.jpg");
             }
           }
         }
@@ -57,27 +57,33 @@ section.categories{
   }
 }
 
-@media (min-width: $smDesktopWidth){
-  section.categories{
+@media (min-width: $tablet) {
+  section.categories {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  section.categories {
     margin-bottom: 0px;
     padding: 75px 67px;
-    & .container{
-      & ul.list{
+    & .container {
+      & ul.list {
         justify-content: center;
-        & li.item{
+        & li.item {
           width: 16%;
           margin-bottom: 0px;
           margin-right: 40px;
           border-radius: 50%;
-          & a{
+          & a {
             position: relative;
             display: flex;
             margin: auto;
-            & .pic{
+            & .pic {
               margin-bottom: 0;
               box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.15);
             }
-            & p{
+            & p {
               position: absolute;
               color: $green;
               font-size: $fz2;
@@ -88,58 +94,58 @@ section.categories{
               margin: auto;
               letter-spacing: $ls1;
               color: $white;
-              transition: .2s;
+              transition: 0.2s;
               border-radius: 50%;
-              &:last-child{
+              &:last-child {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
               }
             }
           }
-          &:nth-child(2){
-            & a{
-              & .pic{
-                background-image: url('/assets/img/categories/category-2.jpg');
+          &:nth-child(2) {
+            & a {
+              & .pic {
+                background-image: url("/assets/img/categories/category-2.jpg");
               }
             }
           }
-          &:nth-child(3){
-            & a{
-              & .pic{
-                background-image: url('/assets/img/categories/category-3.jpg');
+          &:nth-child(3) {
+            & a {
+              & .pic {
+                background-image: url("/assets/img/categories/category-3.jpg");
               }
             }
           }
-          &:nth-child(4){
+          &:nth-child(4) {
             margin-right: 0;
-            & a{
-              & .pic{
-                background-image: url('/assets/img/categories/category-4.jpg');
+            & a {
+              & .pic {
+                background-image: url("/assets/img/categories/category-4.jpg");
               }
             }
           }
-          &:hover{
-            & p{
+          &:hover {
+            & p {
               background-color: rgba(239, 128, 181, 0.7);
             }
-            &:nth-child(2){
-              & a{
-                & p{
+            &:nth-child(2) {
+              & a {
+                & p {
                   background-color: rgba(242, 125, 2, 0.7);
                 }
               }
             }
-            &:nth-child(3){
-              & a{
-                & p{
+            &:nth-child(3) {
+              & a {
+                & p {
                   background-color: rgba(55, 137, 64, 0.7);
                 }
               }
             }
-            &:nth-child(4){
-              & a{
-                & p{
+            &:nth-child(4) {
+              & a {
+                & p {
                   background-color: rgba(64, 134, 208, 0.7);
                 }
               }
@@ -151,13 +157,19 @@ section.categories{
   }
 }
 
-@media (min-width: $lgDesktopWidth){
-  section.categories{
-    & .container{
-      & ul.list{
-        & li.item{
-          & a{
-            & p{
+@media (min-width: $desktopWidth) {
+  section.categories {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: $lgDesktopWidth) {
+  section.categories {
+    & .container {
+      & ul.list {
+        & li.item {
+          & a {
+            & p {
               font-size: $fz7;
             }
           }

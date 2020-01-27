@@ -6,7 +6,7 @@
   position: relative;
   margin-left: 31px;
 
-  & .menu-switch{
+  & .menu-switch {
     width: 18px;
     height: 44px;
     position: absolute;
@@ -16,11 +16,11 @@
     transition: all 0.3s ease-in-out;
     transform: translateZ(0);
     z-index: -1;
-    
+
     & span,
     &::before,
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 18px;
       height: 2px;
       position: absolute;
@@ -33,15 +33,15 @@
       transform: translateZ(0);
     }
 
-    & span{
+    & span {
       width: 18px;
     }
 
-    &::before{
+    &::before {
       margin-top: -8px;
     }
 
-    &::after{
+    &::after {
       margin-top: 6px;
     }
   }
@@ -56,9 +56,9 @@
     width: 18px;
   }
 
-  & #menu-switch:not(:checked) ~ .menu-switch:hover::before, 
+  & #menu-switch:not(:checked) ~ .menu-switch:hover::before,
   & #menu-switch:not(:checked) ~ .menu-switch:hover::after {
-      width: 18px;
+    width: 18px;
   }
 
   & #menu-switch:checked ~ .menu-switch span {
@@ -73,14 +73,14 @@
   }
 
   & #menu-switch:checked ~ .menu-switch::before {
-      transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 
   & #menu-switch:checked ~ .menu-switch::after {
     transform: rotate(-45deg);
-}
+  }
 
-  & #navigation{
+  & #navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +95,7 @@
     transform: translate(0, 90px);
     opacity: 0;
     pointer-events: none;
-    & ul{
+    & ul {
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -103,123 +103,124 @@
       width: 100%;
       padding: 0 10px;
       position: relative;
-      & li{
-        transition: .2s;
+      & li {
+        transition: 0.2s;
         height: 16.66%;
         display: flex;
         text-align: center;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         position: relative;
-        & a{
+        & a {
           font-size: $fz5;
           padding: 0;
           display: inline-block;
           color: $white;
           text-transform: uppercase;
           font-weight: $bold;
-          transition: .2s;
+          transition: 0.2s;
           &:hover,
-          &:active{
+          &:active {
             color: $white;
           }
-          
         }
-        & ul.doctors__list{
+        & ul.doctors__list {
           display: none;
         }
-        &::after{
+        &::after {
           display: block;
           position: absolute;
-          content: '';
-          left: 4px;
+          content: "";
+          left: 0;
+          right: 0;
+          margin: auto;
           bottom: -4px;
           width: 8px;
           height: 8px;
-          background-image: url('/assets/img/icons/icon-menu.svg');
+          background-image: url("/assets/img/icons/icon-menu.svg");
           background-size: contain;
           background-position: 50%;
           background-repeat: no-repeat;
         }
         &:last-child,
-        &:nth-last-child(2){
-          &::after{
+        &:nth-last-child(2) {
+          &::after {
             display: none;
           }
         }
-        &.visible__md{
+        &.visible__md {
           display: none;
         }
       }
-      & li.list__pages{
+      & li.list__pages {
         position: absolute;
         right: -100%;
         top: 0;
         height: 100%;
         width: 60%;
-        transition: .2s;
-        & ul.pages{
+        transition: 0.2s;
+        & ul.pages {
           height: 85%;
-          & li.item__page{
+          & li.item__page {
             justify-content: flex-start;
-            & a{
+            & a {
               font-size: $fz3;
               text-align: left;
               font-weight: $medium;
               text-transform: inherit;
             }
-            &::after{
+            &::after {
               display: none;
             }
           }
         }
-        &.show{
+        &.show {
           right: 0;
         }
       }
     }
   }
 
-  & .quick-contact{
+  & .quick-contact {
     width: 100%;
     background-color: $green;
     text-align: center;
     padding: 20px 10px;
-    & p.address{
+    & p.address {
       font-style: normal;
       margin: 1.5em 0;
       color: $white;
       font-size: $fz6;
       line-height: 160%;
-      & img{
+      & img {
         display: inline-block;
         margin-right: 6px;
       }
     }
 
-    & p.contacts{
+    & p.contacts {
       font-style: normal;
       font-size: $fz5;
       line-height: 160%;
-      & a{
+      & a {
         color: $white;
         font-weight: $bold;
         font-size: $fz8;
       }
     }
 
-    & .button{
-      & a{
+    & .button {
+      & a {
         color: $black;
         font-weight: $bold;
         background-color: $white;
         padding: 0px 65px 0px 40px;
-        background-image: url('/assets/img/icons/icon-btn-arrow-black.svg');
+        background-image: url("/assets/img/icons/icon-btn-arrow-black.svg");
       }
     }
   }
 
-  & #menu-switch:checked ~ #navigation{
+  & #menu-switch:checked ~ #navigation {
     pointer-events: initial;
     opacity: 1;
     transform: translate(0, 0);
@@ -229,13 +230,19 @@
   }
 }
 
+@media (min-width: $tablet) {
+  .burger {
+    width: 18px;
+  }
+}
+
 @media (min-width: $smDesktopWidth) {
-  .burger{
+  .burger {
     width: 100%;
     margin-left: 0;
     height: 100%;
     cursor: inherit;
-    & #navigation{
+    & #navigation {
       position: relative;
       opacity: 1;
       transform: inherit;
@@ -244,56 +251,56 @@
       box-shadow: none;
       pointer-events: inherit;
       height: 100%;
-      & ul{
+      & ul {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        & li{
+        & li {
           height: auto;
           flex-grow: 1;
           height: 100%;
           justify-content: center;
-          & a{
+          & a {
             font-size: $fz7;
             color: $black;
             height: 100%;
             display: flex;
             align-items: center;
-            &:hover{
+            &:hover {
               color: $green;
             }
-            &:hover + ul.doctors__list{
+            &:hover + ul.doctors__list {
               display: block;
               opacity: 1;
             }
-            &:active{
+            &:active {
               color: $orange;
             }
-            &.logo{
-              & img{
+            &.logo {
+              & img {
                 max-width: 65px;
                 height: 100%;
               }
             }
           }
-          &::after{
+          &::after {
             right: -4px;
             left: auto;
             bottom: 0;
             top: 0;
             margin: auto;
-            background-image: url('/assets/img/icons/icon-menu-gray.svg');
+            background-image: url("/assets/img/icons/icon-menu-gray.svg");
           }
-          &:last-child{
-            &::after{
+          &:last-child {
+            &::after {
               display: none;
             }
           }
-          &.visible__md{
+          &.visible__md {
             display: flex;
           }
-          & ul.doctors__list{
+          & ul.doctors__list {
             display: none;
             opacity: 0;
             position: absolute;
@@ -302,9 +309,9 @@
             padding: 5px 15px;
             width: 160px;
             height: auto;
-            & li.doctor{
+            & li.doctor {
               border-bottom: 1px solid $borderColor;
-              & a{
+              & a {
                 font-size: $fz4;
                 text-align: left;
                 text-transform: inherit;
@@ -312,23 +319,35 @@
                 padding: 14px 0;
                 width: 100%;
               }
-              &::after{
+              &::after {
                 display: none;
               }
-              &:last-child{
+              &:last-child {
                 border-bottom: none;
               }
             }
-            &:hover{
+            &:hover {
               display: block;
               opacity: 1;
             }
           }
         }
-        & li.list__pages{
+        & li.list__pages {
           display: none;
         }
       }
     }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .burger {
+    width: 100%;
+  }
+}
+
+@media (min-width: $lgDesktopWidth) {
+  .burger {
+    width: 100%;
   }
 }

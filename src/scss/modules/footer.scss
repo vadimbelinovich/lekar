@@ -1,8 +1,8 @@
 footer.footer {
   background-color: $white;
-  & .part{
+  & .part {
     padding: 0 20px;
-    & .container{
+    & .container {
       display: flex;
       flex-direction: column;
       background-color: $gray2;
@@ -10,63 +10,63 @@ footer.footer {
       position: relative;
       z-index: 0;
       overflow: hidden;
-      & .block{
+      & .block {
         width: 100%;
         margin-bottom: 30px;
         &:nth-child(1) {
           margin-bottom: 45px;
-          & .pic{
+          & .pic {
             text-align: center;
             margin-bottom: 15px;
-            & img{
+            & img {
               width: 27%;
             }
-            &:last-child{
+            &:last-child {
               margin-bottom: 0;
-              & img{
+              & img {
                 width: 47%;
               }
             }
           }
         }
         &:nth-last-child(2) {
-          & .contacts{
+          & .contacts {
             margin-bottom: 25px;
             text-align: center;
             display: flex;
             flex-direction: column;
-            & a{
+            & a {
               font-weight: $bold;
               line-height: 1;
               font-size: $fz8;
               color: $black;
-              &:first-child{
+              &:first-child {
                 margin-bottom: 10px;
               }
             }
           }
-          & p.address{
+          & p.address {
             text-align: center;
             font-size: $fz6;
-            & img{
+            & img {
               margin-right: 5px;
             }
           }
         }
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
-          & .button{
+          & .button {
             margin-bottom: 20px;
           }
-          & .conf{
+          & .conf {
             text-align: center;
             width: 100%;
-            & a{
+            & a {
               border-bottom: 1px solid $black;
               display: inline-block;
               font-size: $fz3;
-              transition: .2s;
-              &:hover{
+              transition: 0.2s;
+              &:hover {
                 border-bottom: 1px solid transparent;
               }
             }
@@ -74,17 +74,17 @@ footer.footer {
         }
       }
     }
-    &:nth-child(2){
-      & .container{
+    &:nth-child(2) {
+      & .container {
         padding: 0;
       }
     }
-    &:nth-last-child(2){
-      & .container{
-        &::before{
+    &:nth-last-child(2) {
+      & .container {
+        &::before {
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           right: -85%;
           bottom: -80%;
           width: 220%;
@@ -92,21 +92,21 @@ footer.footer {
           background-size: contain;
           background-position: 50%;
           background-repeat: no-repeat;
-          background-image: url('/assets/img/flowers/flower-6.png');
+          background-image: url("/assets/img/flowers/flower-6.png");
           z-index: -1;
         }
       }
     }
-    &:last-child{
+    &:last-child {
       background-color: $black;
       color: $white;
       font-size: $fz4;
       text-align: center;
-      & .container{
+      & .container {
         padding: 16px 0;
         background-color: $black;
-        & p{
-          & a{
+        & p {
+          & a {
             color: $white;
           }
         }
@@ -115,51 +115,57 @@ footer.footer {
   }
 }
 
+@media (min-width: $tablet) {
+  footer.footer {
+    background-color: $white;
+  }
+}
+
 @media (min-width: $smDesktopWidth) {
   footer.footer {
-    & .part{
+    & .part {
       padding: 0 67px;
-      &:nth-last-child(2){
-        & .container{
+      &:nth-last-child(2) {
+        & .container {
           flex-direction: row;
           justify-content: center;
           padding: 80px 20px;
-          & .block{
+          & .block {
             width: auto;
             margin-bottom: 0;
             margin-right: 80px;
             &:nth-child(1) {
               margin-bottom: 0;
-              & .pic{
+              & .pic {
                 margin-bottom: 0px;
-                & img{
+                & img {
                   width: 80px;
                 }
-                &:last-child{
+                &:last-child {
                   margin-bottom: 0;
-                  & img{
+                  & img {
                     width: 47%;
                   }
                 }
               }
             }
-            &:nth-child(2){
-              & ul.list{
-                & li.item{
+            &:nth-child(2) {
+              & ul.list {
+                & li.item {
                   margin-bottom: 12px;
                   line-height: 1;
-                  & a{
+                  & a {
                     color: $black;
                     text-transform: uppercase;
                     font-size: $fz3;
                     letter-spacing: $ls1;
                     font-weight: $bold;
                     border-bottom: 1px solid transparent;
-                    &:hover{
+                    &:hover {
                       border-bottom: 1px solid $black;
                     }
                   }
-                  &:last-child{
+                  &:last-child {
                     margin-bottom: 0;
                   }
                 }
@@ -168,35 +174,35 @@ footer.footer {
             &:nth-last-child(2) {
               display: flex;
               flex-direction: column;
-              & .contacts{
+              & .contacts {
                 margin-bottom: 20px;
                 text-align: left;
                 display: flex;
                 flex-direction: column;
-                & a{
+                & a {
                   font-weight: $bold;
                   line-height: 1;
                   font-size: $fz8;
-                  &:first-child{
+                  &:first-child {
                     margin-bottom: 10px;
                   }
                 }
               }
-              & p.address{
+              & p.address {
                 text-align: left;
-                & img{
+                & img {
                   margin-right: 7px;
                 }
               }
             }
-            &:last-child{
+            &:last-child {
               margin-right: 0;
               display: flex;
               flex-direction: column;
               justify-content: flex-end;
             }
           }
-          &::before{
+          &::before {
             right: auto;
             bottom: auto;
             left: -15%;
@@ -207,25 +213,33 @@ footer.footer {
             background-size: cover;
           }
         }
-        & .map{
-          & .container{
+        & .map {
+          & .container {
             padding: 0;
-            & #gmap{
+            & #gmap {
               width: 100%;
             }
           }
         }
       }
-      &:last-child{
+      &:last-child {
         background-color: $white;
-        & .container{
-          & p{
-            & a{
+        & .container {
+          & p {
+            & a {
               color: $white;
             }
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  footer.footer {
+    & .part {
+      padding: 0 67px;
     }
   }
 }

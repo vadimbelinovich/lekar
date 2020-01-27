@@ -6,20 +6,20 @@ header.header {
   background-color: $white;
   top: 0;
   z-index: 1;
-  & .container{
+  & .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
     a.logo {
       cursor: pointer;
-      & img{
+      & img {
         display: block;
         max-width: 100px;
       }
     }
 
-    & h3.title{
+    & h3.title {
       font-size: $fz1;
       text-align: center;
       font-weight: $bold;
@@ -29,10 +29,16 @@ header.header {
   }
 }
 
+@media (min-width: $tablet) {
+  header.header {
+    padding: 10px 0;
+  }
+}
+
 @media (min-width: $smDesktopWidth) {
   header.header {
     padding: 0;
-    & .container{
+    & .container {
       height: 100%;
     }
   }
@@ -40,7 +46,7 @@ header.header {
 
 @media (min-width: $desktopWidth) {
   header.header {
-    & .container{
+    & .container {
       padding: 0 8%;
     }
   }

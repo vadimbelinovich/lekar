@@ -1,13 +1,22 @@
-.map{
-  & .container{
+.map {
+  & .container {
     padding: 0;
     border: 2px solid $green;
   }
 }
 
+@media (min-width: $tablet) {
+  .map {
+    & .container {
+      padding: 0;
+      border: 2px solid $green;
+    }
+  }
+}
+
 @media (min-width: $smDesktopWidth) {
-  .map{
-    & .container{
+  .map {
+    & .container {
       padding: 0;
       border: 5px solid $green;
     }

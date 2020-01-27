@@ -1,4 +1,4 @@
-main.main{
+main.main {
   background-size: cover;
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -6,36 +6,36 @@ main.main{
   margin-bottom: 40px;
   z-index: 0;
   position: relative;
-  & .container{
+  & .container {
     display: flex;
     flex-direction: column;
     padding: 70px 40px 30px;
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
-    background-image: url('/assets/img/bg/main-bg.jpg');
+    background-image: url("/assets/img/bg/main-bg.jpg");
     position: relative;
-    & svg{
+    & svg {
       position: absolute;
       z-index: 0;
       width: 100%;
       height: 100%;
       left: 0;
       top: 0;
-      & polygon{
+      & polygon {
         background-color: $black;
         height: 100%;
         fill: $lightGreen;
       }
     }
-    & .title{
+    & .title {
       width: 100%;
       padding-top: 100%;
       margin: 0 auto 70px;
       border-radius: 50%;
       position: relative;
       z-index: 1;
-      & .content{
+      & .content {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -47,23 +47,23 @@ main.main{
         flex-direction: column;
         justify-content: center;
         z-index: 1;
-        & span{
+        & span {
           display: block;
           height: 20px;
           width: 100%;
           background-size: 35% auto;
           background-position: 50% 100%;
           background-repeat: no-repeat;
-          background-image: url('/assets/img/icons/icon-title.svg');
+          background-image: url("/assets/img/icons/icon-title.svg");
         }
-        & h1{
+        & h1 {
           font-size: 0;
           width: 70%;
           margin: 20px auto;
           position: relative;
           text-align: center;
         }
-        & p{
+        & p {
           font-size: $fz5;
           text-align: center;
           font-family: $altFont;
@@ -73,10 +73,10 @@ main.main{
           line-height: $lineHeight2;
         }
       }
-      &::before{
+      &::before {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -86,9 +86,9 @@ main.main{
         background-size: cover;
         background-position: 50% 0%;
         background-repeat: no-repeat;
-        background-image: url('/assets/img/bg/main-bg.jpg');
+        background-image: url("/assets/img/bg/main-bg.jpg");
       }
-      & ul.list{
+      & ul.list {
         position: absolute;
         top: 0;
         width: 200%;
@@ -96,7 +96,7 @@ main.main{
         left: 50%;
         transform: translateX(-50%);
         display: flex;
-        & li.item{
+        & li.item {
           width: 50%;
           height: 100%;
           border-radius: 50%;
@@ -106,16 +106,16 @@ main.main{
           background-size: cover;
           background-position: 50% 0%;
           background-repeat: no-repeat;
-          background-image: url('/assets/img/main-slider/item-1.jpg');
+          background-image: url("/assets/img/main-slider/item-1.jpg");
           &:nth-child(2) {
             left: 50%;
-            background-image: url('/assets/img/main-slider/item-2.jpg');
+            background-image: url("/assets/img/main-slider/item-2.jpg");
           }
         }
-        &::after{
+        &::after {
           display: block;
           position: absolute;
-          content: '';
+          content: "";
           left: 0%;
           top: 0;
           right: 0;
@@ -123,14 +123,14 @@ main.main{
           margin: auto;
           width: 70%;
           height: 100%;
-          background-image: url('/assets/img/bg/main-frame.png');
+          background-image: url("/assets/img/bg/main-frame.png");
           background-size: contain;
           background-position: 50%;
           background-repeat: no-repeat;
         }
       }
     }
-    p.descr{
+    p.descr {
       font-size: $fz5;
       font-family: $altFont;
       color: $green;
@@ -140,33 +140,33 @@ main.main{
       text-align: center;
       position: relative;
     }
-    & .button{
+    & .button {
       position: relative;
     }
   }
-  &::before{
+  &::before {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     right: 80%;
     bottom: 15%;
     width: 100%;
     height: 50%;
-    background-image: url('/assets/img/flowers/flower-1.png');
+    background-image: url("/assets/img/flowers/flower-1.png");
     background-size: contain;
     background-position: 100% 0%;
     background-repeat: no-repeat;
     z-index: 2;
   }
-  &::after{
+  &::after {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     left: 80%;
     bottom: 15%;
     width: 100%;
     height: 65%;
-    background-image: url('/assets/img/flowers/flower-2.png');
+    background-image: url("/assets/img/flowers/flower-2.png");
     background-size: contain;
     background-position: 0% 0%;
     background-repeat: no-repeat;
@@ -175,25 +175,31 @@ main.main{
   }
 }
 
+@media (min-width: $tablet) {
+  main.main {
+    background-size: cover;
+  }
+}
+
 @media (min-width: $smDesktopWidth) {
-  main.main{
+  main.main {
     padding: 0px 67px 0px;
     margin-bottom: 0px;
-    & .container{
+    & .container {
       padding: 50px;
-      & .button{
+      & .button {
         order: 1;
         text-align: right;
         padding-right: 100px;
         margin-bottom: 35px;
       }
-      & .title{
+      & .title {
         order: 2;
         width: 30%;
         padding-top: 30%;
-        & .content{
-          & p{
-            &.text-1{
+        & .content {
+          & p {
+            &.text-1 {
               color: $black;
               font-family: $mainFont;
               font-style: normal;
@@ -201,24 +207,24 @@ main.main{
               font-weight: $bold;
             }
           }
-          & span{
+          & span {
             height: 20px;
           }
         }
-        & ul.list{
-          &::after{
+        & ul.list {
+          &::after {
             left: -5%;
             width: 110%;
           }
         }
       }
-      & p.descr{
+      & p.descr {
         order: 3;
         max-width: 670px;
         margin: auto;
       }
     }
-    &::before{
+    &::before {
       right: 80%;
       bottom: 0;
       top: 0;
@@ -226,7 +232,7 @@ main.main{
       width: 40%;
       height: 80%;
     }
-    &::after{
+    &::after {
       left: 80%;
       bottom: 0;
       top: 0;
@@ -238,29 +244,29 @@ main.main{
 }
 
 @media (min-width: $lgDesktopWidth) {
-  main.main{
-    & .container{
-      & .title{
-        & .content{
-          & p{
-            &.text-1{
+  main.main {
+    & .container {
+      & .title {
+        & .content {
+          & p {
+            &.text-1 {
               font-size: $fz7;
               text-transform: uppercase;
             }
-            &.text-2{
+            &.text-2 {
               font-size: $fz12;
             }
           }
-          & h1{
+          & h1 {
             margin: 55px auto;
           }
-          & span{
+          & span {
             height: 60px;
             background-size: 25% auto;
           }
         }
       }
-      & p.descr{
+      & p.descr {
         font-size: $fz11;
       }
     }

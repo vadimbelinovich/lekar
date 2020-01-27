@@ -7,7 +7,7 @@ form.form {
     margin-bottom: 30px;
     position: relative;
 
-    & span.wpcf7-form-control-wrap{
+    & span.wpcf7-form-control-wrap {
       margin-bottom: 30px;
       display: block;
       & input.input {
@@ -19,17 +19,17 @@ form.form {
         background-color: $white;
         cursor: pointer;
         font-family: $mainFont;
-        &:focus{
+        &:focus {
           outline: none;
         }
-        &::placeholder{
+        &::placeholder {
           color: $gray;
         }
-        &:last-of-type{
+        &:last-of-type {
           margin-bottom: 0;
         }
       }
-      & textarea.textarea{
+      & textarea.textarea {
         padding: 10px 15px;
         font-size: $fz3;
         width: 100%;
@@ -37,22 +37,21 @@ form.form {
         color: $black;
         min-height: 120px;
         font-family: $mainFont;
-        &::placeholder{
+        &::placeholder {
           color: $gray;
         }
       }
       &.textarea-494,
-      &.your-email{
+      &.your-email {
         margin-bottom: 0;
       }
     }
-    &:nth-of-type(2){
-      & span{
+    &:nth-of-type(2) {
+      & span {
         margin-bottom: 30px;
       }
-      
     }
-    &:nth-last-child(2){
+    &:nth-last-child(2) {
       margin-bottom: 0;
       & input.button {
         width: 100%;
@@ -62,7 +61,7 @@ form.form {
         display: inline-block;
         background-color: transparent;
         border: 1px solid $white;
-        background-image: url('/assets/img/icons/icon-btn-arrow.svg');
+        background-image: url("/assets/img/icons/icon-btn-arrow.svg");
         background-size: auto 13%;
         background-position: 90% 50%;
         background-repeat: no-repeat;
@@ -72,53 +71,57 @@ form.form {
         font-weight: $bold;
         text-transform: uppercase;
         cursor: pointer;
-        transition: .2s;
-        &:hover{
+        transition: 0.2s;
+        &:hover {
           background-position: 92% 50%;
         }
       }
     }
   }
 
-  & p{
+  & p {
     margin-bottom: 30px;
     display: flex;
     align-items: stretch;
-    & img{
+    & img {
       margin-right: 10px;
     }
-    & span{
+    & span {
       display: inline-block;
-      & input{
+      & input {
         padding: 5px;
       }
     }
   }
 }
 
-@media (min-width: $smDesktopWidth){
-  .wpcf7{
+@media (min-width: $tablet) {
+  form.form {
+    display: flex;
+  }
+}
+
+@media (min-width: $smDesktopWidth) {
+  .wpcf7 {
     width: 55%;
   }
-  form.form{
-
-    & .form__field{
-      & span{
-        
+  form.form {
+    & .form__field {
+      & span {
         & input.input {
           margin-bottom: 0;
           padding: 17px 25px;
         }
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         display: flex;
         justify-content: space-between;
-        & span{
+        & span {
           width: 48%;
           margin-bottom: 0;
         }
       }
-      &:nth-last-child(2){
+      &:nth-last-child(2) {
         & input.button {
           width: 262px;
         }
