@@ -17,4 +17,17 @@ if ($('.review__new .button a.btn').length) {
       $('.review__new .content').slideDown().addClass('show');
     }
   })
-} 
+}
+
+if (window.innerWidth < 992) {
+  if ($('.message .button a.btn').length) {
+    $('.message .button a.btn').on('click', function () {
+      $(this).toggleClass('show')
+      if ($('.message .container.show').length) {
+        $('.message .container').slideUp().removeClass('show');
+      } else {
+        $('.message .container').slideDown().addClass('show');
+      }
+    })
+  }
+}
