@@ -101,13 +101,13 @@ main.about__main {
           font-size: $fz4;
           text-transform: uppercase;
           font-weight: $bold;
-          padding-top: 25px;
+          padding-top: 20px;
           color: $white;
           background-image: url("/assets/img/icons/icon-title-white.svg");
           background-repeat: no-repeat;
           background-position: 0 0;
           background-size: 8px 8px;
-          margin-bottom: 30px;
+          margin-bottom: 15px;
           letter-spacing: $ls1;
           &:last-child {
             margin-bottom: 0;
@@ -173,7 +173,7 @@ section.about__content {
               }
               &:nth-child(2) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-2.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-8-green.svg");
                 }
               }
               &:nth-child(3) {
@@ -183,7 +183,7 @@ section.about__content {
               }
               &:nth-child(4) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-4.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-5.svg");
                 }
               }
               &:nth-child(5) {
@@ -193,17 +193,18 @@ section.about__content {
               }
               &:nth-child(6) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-6.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-7.svg");
                 }
               }
               &:nth-child(7) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-7.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-6.svg");
                 }
               }
               &:nth-child(8) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-5.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-2.svg");
+                  background-size: 50%;
                 }
               }
               &:nth-child(9) {

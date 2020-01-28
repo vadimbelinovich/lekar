@@ -189,9 +189,9 @@
   }
 }
 section.service__description {
-  padding: 50px 20px;
+  padding: 20px;
   font-size: 10px;
-  background-size: auto 80%;
+  background-size: auto 45%;
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-image: url("/assets/img/flowers/flower-service.png");
@@ -209,7 +209,7 @@ section.service__description {
     }
     & p.subtitle {
       font-size: $fz5;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       text-align: center;
     }
     & .content {
@@ -226,7 +226,7 @@ section.service__description {
           text-transform: uppercase;
         }
         & p {
-          font-size: $fz4;
+          font-size: $fz6;
           position: relative;
           margin-bottom: 20px;
           &:last-child {
@@ -254,23 +254,23 @@ section.service__description {
           }
           & ul.list {
             & li.item {
-              margin-bottom: 30px;
+              margin-bottom: 10px;
               & p {
-                font-size: $fz4;
+                font-size: $fz3;
                 letter-spacing: $ls1;
               }
             }
           }
         }
         &:last-child {
-          margin-top: 40px;
+          margin-top: 20px;
           & p {
             font-size: $fz6;
           }
         }
       }
       &.special {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
       }
     }
     & .button {
@@ -295,6 +295,28 @@ section.service__description {
               font-size: $fz6;
               &::before {
                 display: none;
+              }
+            }
+          }
+          & ul {
+            & li {
+              letter-spacing: $ls2;
+              padding-left: 15px;
+              margin-bottom: 10px;
+              font-size: $fz4;
+              position: relative;
+              &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                left: 0px;
+                top: 5px;
+                width: 7px;
+                height: 7px;
+                background-image: url("/assets/img/icons/icon-title-black.svg");
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
               }
             }
           }
@@ -372,7 +394,7 @@ section.service__description {
     & .container {
       & .content {
         & p {
-          font-size: $fz4;
+          font-size: $fz5;
         }
         & h3.title {
           font-size: $fz8;
@@ -387,7 +409,7 @@ section.service__description {
                 text-transform: uppercase;
                 position: relative;
                 font-size: $fz4;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 letter-spacing: $ls1;
                 &::before {
                   display: block;
@@ -431,7 +453,7 @@ section.service__description {
           font-weight: $bold;
           padding: 50px 0;
           position: relative;
-          margin-bottom: 70px;
+          margin-bottom: 40px;
           font-size: $fz4;
           &::before {
             display: block;
@@ -475,7 +497,7 @@ section.service__description {
         margin-bottom: 0;
         & ul.list {
           padding-left: 25px;
-          margin-bottom: 60px;
+          margin-bottom: 30px;
           & li.item {
             margin-bottom: 20px;
             & p {
@@ -509,11 +531,11 @@ section.service__description {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
           & .part {
             padding-left: 0;
             & p {
-              font-size: $fz3;
+              font-size: $fz4;
               text-transform: inherit;
               letter-spacing: inherit;
               &::before {
@@ -550,7 +572,7 @@ section.service__description {
               text-align: center;
               padding: 50px 0;
               position: relative;
-              margin-bottom: 70px;
+              margin-bottom: 30px;
               font-size: $fz6;
               &::before {
                 display: block;
@@ -747,7 +769,7 @@ section.service__description {
         font-size: $fz14;
       }
       p.subtitle {
-        font-size: $fz8;
+        font-size: $fz7;
       }
     }
 
@@ -777,7 +799,7 @@ section.service__description {
           padding-left: 25px;
           & p {
             font-size: $fz6;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
           }
 
           &:last-child {
@@ -797,6 +819,12 @@ section.service__description {
             &:first-child {
               & p {
                 font-size: $fz8;
+              }
+            }
+            & ul {
+              margin-top: -10px;
+              & li {
+                font-size: $fz6;
               }
             }
           }
@@ -1027,6 +1055,26 @@ section.service__description {
           & ul.list {
             & li.item {
               padding: 20px;
+            }
+          }
+        }
+      }
+    }
+    & .container {
+      & .content {
+        & .part {
+          &:first-child {
+            & ul.list {
+              & li.item {
+                margin-bottom: 20px;
+              }
+            }
+          }
+          &.special {
+            & ul.list {
+              & li.item {
+                margin-bottom: 20px;
+              }
             }
           }
         }
