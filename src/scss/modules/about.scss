@@ -183,12 +183,12 @@ section.about__content {
               }
               &:nth-child(4) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-5.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-4.svg");
                 }
               }
               &:nth-child(5) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-8.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-6.svg");
                 }
               }
               &:nth-child(6) {
@@ -198,7 +198,7 @@ section.about__content {
               }
               &:nth-child(7) {
                 & .pic {
-                  background-image: url("/assets/img/icons/services/service-icon-6.svg");
+                  background-image: url("/assets/img/icons/services/service-icon-8.svg");
                 }
               }
               &:nth-child(8) {
@@ -214,6 +214,12 @@ section.about__content {
               }
             }
           }
+        }
+      }
+      & .licences {
+        padding: 20px 0;
+        & .slick-dots {
+          top: 100%;
         }
       }
     }
@@ -297,6 +303,19 @@ section.about__content {
             }
           }
         }
+        & .licences {
+          padding: 40px 0;
+          & .slick-dots {
+            top: 100%;
+          }
+          & ul.list {
+            display: flex;
+            justify-content: space-between;
+            & li.item {
+              width: 30%;
+            }
+          }
+        }
       }
     }
   }
@@ -351,6 +370,21 @@ section.about__content {
                     transform: translateY(-5px);
                   }
                 }
+              }
+            }
+          }
+        }
+        & .licences {
+          padding: 40px 0;
+          & .container {
+            padding: 0 67px;
+            & ul.list {
+              display: flex;
+              justify-content: center;
+              & li.item {
+                width: 30%;
+                max-width: 200px;
+                padding: 0 20px;
               }
             }
           }

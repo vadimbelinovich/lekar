@@ -59,6 +59,9 @@
                 display: block;
                 font-size: $fz3;
                 width: 100%;
+                &.empty {
+                  color: transparent;
+                }
                 &::before {
                   position: absolute;
                   top: 50%;
@@ -70,6 +73,7 @@
                   font-weight: 600;
                   padding-right: 10px;
                   white-space: nowrap;
+                  color: $black;
                 }
                 &:nth-child(1) {
                   &::before {
@@ -357,6 +361,18 @@
                 }
               }
             }
+            &:nth-child(9) {
+              & a {
+                &::before {
+                  background-image: url("/assets/img/icons/services/service-icon-9-black.svg");
+                }
+                &:hover {
+                  &::before {
+                    background-image: url("/assets/img/icons/services/service-icon-9-orange.svg");
+                  }
+                }
+              }
+            }
           }
         }
         &::before {
@@ -552,11 +568,10 @@
               margin-bottom: 110px;
               width: 50%;
               & a {
-                padding-left: 80px;
                 min-height: 34px;
                 &::before {
                   width: 60px;
-                  height: 60px;
+                  height: 45px;
                 }
               }
               &:nth-last-child(1),

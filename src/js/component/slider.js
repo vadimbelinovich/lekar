@@ -33,14 +33,30 @@ function docSlider() {
 
   if ($('main.team ul.list').length) {
     $('main.team ul.list').slick({
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      dots: true,
+      arrows: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: 'unslick'
+        }
+      ]
+    });
+  }
+
+  if ($('.licences .list').length) {
+    $('.licences .list').slick({
+      autoplay: true,
       autoplaySpeed: 6000,
       dots: true,
       arrows: false,
       mobileFirst: true,
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 767,
           settings: 'unslick'
         }
       ]

@@ -11,10 +11,10 @@ footer.footer
           img(src="./assets/img/logo-title.svg", alt="img")
       .block.visible__md
         ul.list
-          //- li.item
-          //-   a(href="") УСЛУГИ
-          //- li.item
-          //-   a(href="") ВРАЧИ
+          li.item
+            a(href="") УСЛУГИ
+          li.item
+            a(href="") ВРАЧИ
           li.item
             a(href="/prices.html") ЦЕНЫ
           li.item
@@ -23,7 +23,7 @@ footer.footer
             a(href="/contacts.html") КОНТАКТЫ 
       .block
         .contacts
-          a(href="telto:+79819980535") +7 (981) 998 05 35
+          a(href="tel:+79819980535") +7 (981) 998 05 35
           a(href="mailto:mail@lekarspb.ru") mail@lekarspb.ru
         p.address
           img(src="./assets/img/icons/icon-metro.svg", alt="icon")
@@ -33,7 +33,7 @@ footer.footer
       .block
         include ./socials
         .button
-          a.btn(href="/appointment.html") записаться на прием
+          a.btn.popup-open(href="") записаться на прием
         .conf
           a(href="/confidential.html") Политика конфиденциальности
   .part
@@ -44,3 +44,4 @@ footer.footer
         |  Все права защищены 
         a(href="https://uno-agency.ru/", target='_blank') 
           b UNO Advertising
+include ./popup

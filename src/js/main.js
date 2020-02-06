@@ -1,4 +1,5 @@
 import "slick-carousel";
+import "lightbox2";
 import slider from "./component/date";
 import scroll from "./component/scroll";
 import docSlider from "./component/slider";
@@ -31,3 +32,34 @@ if (window.innerWidth < 992) {
     })
   }
 }
+
+// $('.popup-open').on('click', function (e) {
+//   e.preventDefault()
+//   $('.popup').fadeIn()
+//   $('.popup h2').text('Хотите получить более детальную информацию или записаться на приём?')
+// })
+
+// $('.modal .close').on('click', function (e) {
+//   $('.popup').fadeOut();
+
+//   $('.modal input').each(function (e) {
+//     if ($(this).val() !== 'Записаться') {
+//       $(this).val('')
+//     }
+//   })
+// })
+
+// function openPopup() {
+//   setTimeout(function () {
+//     $('.popup').fadeIn();
+//     $('.popup h2').text('Остались вопросы? Мы перезвоним Вам в ближайшее время.')
+//   }, 40000)
+// }
+
+// openPopup()
+
+document.addEventListener('wpcf7mailsent', function (event) {
+  setTimeout(function () {
+    $('.popup').fadeOut();
+  }, 1000)
+}, false);

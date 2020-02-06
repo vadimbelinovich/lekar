@@ -124,6 +124,8 @@ h2.title {
   display: none;
 }
 
+@import "modules/popup.scss";
+
 @import "modules/team.scss";
 
 @import "modules/service-page.scss";
@@ -165,6 +167,8 @@ h2.title {
 @import "modules/slick.scss";
 
 @import "modules/slick-theme.scss";
+
+@import "modules/lightbox.scss";
 
 @media (min-width: $tablet) {
   .visible__sm {

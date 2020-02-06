@@ -1,0 +1,35 @@
+.popup
+  .modal-container.active
+    .modal-background
+      .modal
+        .close
+          a.btn
+        .content
+          .title
+            h2 Хотите получить более детальную информацию или записаться на приём?
+          .inner
+            .wpcf7#wpcf7-f5-o1(role="form" lang="ru-RU" dir="ltr")
+              .screen-reader-response
+              form.wpcf7-form.form(action="")
+                div(style="display: none;")
+                  input(type="hidden" name="_wpcf7" value="5")
+                  input(type="hidden" name="_wpcf7_version" value="5.1.6")
+                  input(type="hidden" name="_wpcf7_locale" value="ru_RU")
+                  input(type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1")
+                  input(type="hidden" name="_wpcf7_container_post" value="0")
+                .field
+                  span.wpcf7-form-control-wrap.your-name
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.input(type="text" name="your-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Ваше имя")
+                .field
+                  span.wpcf7-form-control-wrap.your-name
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.input(type="tel" name="your-phone" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Ваш телефон")
+                //- p
+                //-   input(type="hidden" name="_wpcf7_captcha_challenge_captcha-170" value="222375879")
+                //-   img.wpcf7-form-control.wpcf7-captchac.wpcf7-captcha-captcha-170(width="72" height="24" alt="captcha" src="https://lekarspb.ru/wp-content/uploads/wpcf7_captcha/222375879.png")
+                //-   span.wpcf7-form-control-wrap.captcha-170
+                //-     input.wpcf7-form-control.wpcf7-captchar.wpcf7-not-valid(type="text" name="captcha-170" value="" size="4" maxlength="4" autocomplete="off" aria-invalid="true")
+                //-     span.wpcf7-not-valid-tip(role="alert") Код введен неверно.
+                .button
+                  input.wpcf7-form-control.wpcf7-submit.button(type="submit" value="Записаться")
+                  span.ajax-loader
+                .wpcf7-response-output.wpcf7-display-none
